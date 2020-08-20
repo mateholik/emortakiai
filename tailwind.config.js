@@ -5,7 +5,15 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 module.exports = {
-  theme: {},
-  variants: {},
+  theme: {
+    extend: {
+      height: {
+        iframe: '800px',
+        iframeMob: '500px'
+      }
+    }
+  },
+  variants: {
+  },
   plugins: []
 }

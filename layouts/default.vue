@@ -1,55 +1,103 @@
 <template>
   <div>
-    <nuxt />
+    <Header></Header>
+    <transition name="slide-left">
+      <nuxt />
+    </transition>
+    <Footer></Footer>
   </div>
 </template>
 
-<style>
+<script>
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
+
+<style lang="scss">
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #5C6173;
 }
-
+body {
+  font-size: 1.6rem;
+}
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
+h1, h2, h3, h4 {
+  color: #3A425D;
+}
+.container {
+  max-width: 1140px;
+  @apply mx-auto px-4;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.5rem;
+  max-width: 30rem;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(180.76deg, #1A9CFC 6.4%, #1A9CFC 96.45%);
+  color: white;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+  font-weight: 600;
+  cursor: pointer;
+  &--short {
+    @media(max-width: 768px) {
+      height: 4rem;
+    }
+  }
+  &:hover {
+    padding-left: 0.2rem;
+  }
+}
+@responsive {
+  .text-20 {
+    font-size: 2rem;
+  }
+  .text-25 {
+    font-size: 2.5rem;
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(-2em, 0);
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(2em, 0);
 }
+
 </style>

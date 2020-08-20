@@ -5,14 +5,18 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'EM Ortakių Valymas ⋆ Gartraukių, ventiliatorių, kaminų, šachtų valymas',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Ortakių, gartraukių, ventiliatorių valymas nuo riebalų (prikepusių, skystų), dulkių ir dervų. Gyvenamųjų namų ventiliacijos kanalų (šachtų) valymas.' },
+      { hid: 'og:title', property: 'og:title', content: 'EM Ortakių Valymas ⋆ Gartraukių, ventiliatorių, kaminų, šachtų valymas' },
+      { hid: 'og:description', property: 'og:description', content: 'Ortakių, gartraukių, ventiliatorių valymas nuo riebalų (prikepusių, skystų), dulkių ir dervų. Gyvenamųjų namų ventiliacijos kanalų (šachtų) valymas.' },
+      { hid: 'og:image', property: 'og:image', content: 'https://emortakiuvalymas.lt/_nuxt/img/1366eea.jpg' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap' }
     ]
   },
   /*
@@ -28,6 +32,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/cool-lightbox', ssr: true },
+    { src: '~/plugins/vuelidate', ssr: true }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,7 +48,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Build configuration
@@ -53,5 +60,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  sitemap: {
+    hostname: 'https://emortakiuvalymas.lt',
+    gzip: true
   }
 }
