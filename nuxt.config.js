@@ -1,5 +1,8 @@
 
 export default {
+  serverMiddleware: [
+    { path: '/api/contact', handler: '~/api/contact' },
+  ],
   mode: 'universal',
   /*
   ** Headers of the page
@@ -58,7 +61,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   },
   sitemap: {

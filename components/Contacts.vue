@@ -103,6 +103,7 @@
 
 <script>
 import { required, email } from 'vuelidate/lib/validators'
+const axios = require('axios')
 export default {
   data () {
     return {
@@ -120,14 +121,25 @@ export default {
       if (this.$v.$invalid) {
         this.loading = false
       } else {
-        setTimeout(() => {
+        axios.post('/api/contact', {
+          name: this.name,
+          email: this.email,
+          msg: this.message
+        })
+        .then((response) => {
+          console.log(response)
+          console.log(this)
           this.loading = false
           this.sent = 'Išsiųsta!'
           this.name = ''
           this.email = ''
           this.message = ''
           this.$v.$reset()
-        }, 1000)
+          console.log('done')
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
       }
     }
   },

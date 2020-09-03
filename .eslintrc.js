@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'no-trailing-spaces': 'off'
+    'no-trailing-spaces': 'off',
+    'indent': 'off',
   }
 }
