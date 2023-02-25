@@ -5,23 +5,26 @@
       <nuxt />
     </transition>
     <Footer></Footer>
+    <Cookies />
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
+import Cookies from "~/components/Cookies.vue";
 export default {
   components: {
     Header,
-    Footer
+    Footer,
+    Cookies
   }
-}
+};
 </script>
 
 <style lang="scss">
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 62.5%;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -29,7 +32,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: #5C6173;
+  color: #5c6173;
 }
 body {
   font-size: 1.6rem;
@@ -40,8 +43,11 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
-h1, h2, h3, h4 {
-  color: #3A425D;
+h1,
+h2,
+h3,
+h4 {
+  color: #3a425d;
 }
 .container {
   max-width: 1140px;
@@ -55,13 +61,13 @@ h1, h2, h3, h4 {
   max-width: 30rem;
   width: 100%;
   margin: 0 auto;
-  background: linear-gradient(180.76deg, #1A9CFC 6.4%, #1A9CFC 96.45%);
+  background: linear-gradient(180.76deg, #1a9cfc 6.4%, #1a9cfc 96.45%);
   color: white;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
   &--short {
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       height: 4rem;
     }
   }
@@ -99,5 +105,4 @@ h1, h2, h3, h4 {
   opacity: 0;
   transform: translate(2em, 0);
 }
-
 </style>
