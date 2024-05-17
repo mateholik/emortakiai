@@ -6,6 +6,7 @@ export default {
   /*
    ** Headers of the page
    */
+
   head: {
     title:
       "EM Ortakių Valymas ⋆ Gartraukių, ventiliatorių, kaminų, šachtų valymas",
@@ -43,7 +44,29 @@ export default {
         href:
           "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       }
-    ]
+    ],
+    script: [
+      // Add Google Tag Manager script
+      {
+        hid: 'gtag-script',
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=AW-635796147'
+      },
+      {
+        hid: 'gtag-config',
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-635796147');
+        `,
+        type: 'text/javascript',
+        charset: 'utf-8'
+      }
+    ],
+    __dangerouslyDisableSanitizersByTagID: {
+      'gtag-config': ['innerHTML']
+    }
   },
   /*
    ** Customize the progress-bar color
