@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Header></Header>
+    <Header v-if="showChrome"></Header>
     <transition name="slide-left">
       <nuxt />
     </transition>
-    <Footer></Footer>
-    <Cookies />
+    <Footer v-if="showChrome"></Footer>
+    <Cookies v-if="showChrome" />
   </div>
 </template>
 
@@ -18,6 +18,12 @@ export default {
     Header,
     Footer,
     Cookies
+  },
+  computed: {
+    showChrome() {
+      const path = this.$route.path || ''
+      return path !== '/de' && path !== '/de/'
+    }
   }
 };
 </script>
