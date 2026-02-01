@@ -13,57 +13,57 @@
           alt="image"
           class="block w-full h-full cursor-pointer"
           @click="index = i"
-        />
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import work1 from "./../assets/img/works/work1.jpg";
-import work2 from "./../assets/img/works/work2.jpg";
-import work3 from "./../assets/img/works/work3.jpg";
-import work4 from "./../assets/img/works/work4.jpg";
-import work5 from "./../assets/img/works/work5.jpg";
-import work6 from "./../assets/img/works/work6.jpg";
-import work7 from "./../assets/img/works/work7.jpg";
-import work8 from "./../assets/img/works/work8.jpg";
-import work9 from "./../assets/img/works/work9.jpg";
-import work10 from "./../assets/img/works/work10.jpg";
-import work11 from "./../assets/img/works/work11.jpg";
-import work12 from "./../assets/img/works/work12.jpg";
-import work13 from "./../assets/img/works/work13.jpeg";
-import work14 from "./../assets/img/works/work14.jpeg";
-import work15 from "./../assets/img/works/work15.jpeg";
-import work16 from "./../assets/img/works/work16.jpeg";
-import work17 from "./../assets/img/works/work17.jpeg";
-import work18 from "./../assets/img/works/work18.jpeg";
-import work19 from "./../assets/img/works/work19.jpeg";
+import work1 from './../assets/img/works/work1.jpg'
+import work2 from './../assets/img/works/work2.jpg'
+import work3 from './../assets/img/works/work3.jpg'
+import work4 from './../assets/img/works/work4.jpg'
+import work5 from './../assets/img/works/work5.jpg'
+import work6 from './../assets/img/works/work6.jpg'
+import work7 from './../assets/img/works/work7.jpg'
+import work8 from './../assets/img/works/work8.jpg'
+import work9 from './../assets/img/works/work9.jpg'
+import work10 from './../assets/img/works/work10.jpg'
+import work11 from './../assets/img/works/work11.jpg'
+import work12 from './../assets/img/works/work12.jpg'
+import work13 from './../assets/img/works/work13.jpeg'
+import work14 from './../assets/img/works/work14.jpeg'
+import work15 from './../assets/img/works/work15.jpeg'
+import work16 from './../assets/img/works/work16.jpeg'
+import work17 from './../assets/img/works/work17.jpeg'
+import work18 from './../assets/img/works/work18.jpeg'
+import work19 from './../assets/img/works/work19.jpeg'
 
 export default {
   props: {
     where: {
       type: String,
-      default: ""
+      default: ''
     },
     paveiksliukai: {
       type: Array,
-      default() {
-        return [];
+      default () {
+        return []
       }
     }
   },
-  data() {
+  data () {
     return {
       index: null,
       pictures: []
-    };
+    }
   },
-  mounted() {
-    if (this.where === "homepage") {
-      this.pictures = [work1, work2];
+  mounted () {
+    if (this.where === 'homepage') {
+      this.pictures = [work1, work2]
     } else if (this.paveiksliukai.length > 0) {
-      this.pictures = this.paveiksliukai;
+      this.pictures = this.paveiksliukai
     } else {
       this.pictures = [
         work1,
@@ -85,10 +85,10 @@ export default {
         work17,
         work18,
         work19
-      ];
+      ]
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

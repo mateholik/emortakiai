@@ -16,12 +16,12 @@
     <section>
       <div class="container">
         <Gallery
-        :separatePage="true"
+          :separate-page="true"
         />
       </div>
     </section>
 
-    <Banner></Banner>
+    <Banner />
   </div>
 </template>
 

@@ -8,7 +8,7 @@
               class="h-32 w-32 mx-auto"
               src="~/assets/img/iranga/logo partnerio.png"
               alt="partner logo"
-            />
+            >
           </div>
           <p class="text-white md:text-2xl">
             Profesionali įranga

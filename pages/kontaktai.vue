@@ -14,20 +14,20 @@
     </section>
     <section class="py-8 md:py-16">
       <div class="container">
-        <Contacts></Contacts>
+        <Contacts />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import Contacts from "~/components/Contacts.vue";
+import Contacts from '~/components/Contacts.vue'
 
 export default {
   components: {
     Contacts
   }
-};
+}
 </script>
 
 <style>

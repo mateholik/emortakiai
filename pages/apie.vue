@@ -72,16 +72,16 @@
             </a>
           </div>
         </div>
-<!--        <div>-->
-<!--          <br>-->
-<!--          <h2 class="mb-10 font-semibold text-3xl md:text-5xl">-->
-<!--            Papildoma informacija-->
-<!--          </h2>-->
-<!--          <div>-->†
-<!--            <div class="md:mb-16" ref="frame2" />-->
-<!--            <div ref="frame1" />-->
-<!--          </div>-->
-<!--        </div>-->
+        <!--        <div>-->
+        <!--          <br>-->
+        <!--          <h2 class="mb-10 font-semibold text-3xl md:text-5xl">-->
+        <!--            Papildoma informacija-->
+        <!--          </h2>-->
+        <!--          <div>-->†
+        <!--            <div class="md:mb-16" ref="frame2" />-->
+        <!--            <div ref="frame1" />-->
+        <!--          </div>-->
+        <!--        </div>-->
       </div>
     </main>
 

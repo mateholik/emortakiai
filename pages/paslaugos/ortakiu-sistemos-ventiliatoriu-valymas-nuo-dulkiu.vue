@@ -31,7 +31,7 @@
             </p>
             <div class="mb-8">
               <video controls preload="metadata">
-                <source src="~/assets/video/paslaugos-2.mp4" type="video/mp4" />
+                <source src="~/assets/video/paslaugos-2.mp4" type="video/mp4">
               </video>
             </div>
             <h1 class="mb-10 text-3xl font-semibold md:text-5xl">
@@ -73,25 +73,25 @@
               />
             </div>
           </div>
-          <Sidebar></Sidebar>
+          <Sidebar />
         </div>
       </div>
     </main>
 
-    <Banner></Banner>
+    <Banner />
   </div>
 </template>
 
 <script>
-import Sidebar from "~/components/Sidebar.vue";
-import Banner from "~/components/Banner.vue";
+import Sidebar from '~/components/Sidebar.vue'
+import Banner from '~/components/Banner.vue'
 
 export default {
   components: {
     Sidebar,
     Banner
   }
-};
+}
 </script>
 
 <style>

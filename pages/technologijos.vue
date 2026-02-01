@@ -109,12 +109,12 @@
               />
             </div>
           </div>
-          <Sidebar></Sidebar>
+          <Sidebar />
         </div>
       </div>
     </main>
 
-    <Banner></Banner>
+    <Banner />
   </div>
 </template>
 

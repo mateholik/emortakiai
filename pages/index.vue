@@ -16,11 +16,13 @@
             </a>
             <span class="ml-8">Licencija:</span>
             <a href="/licencija.png" target="_blank" class="pl-6">
-             <img class="w-10 h-10" src="~/assets/img/pdf.svg" alt="pdf">
+              <img class="w-10 h-10" src="~/assets/img/pdf.svg" alt="pdf">
             </a>
           </div>
           <div class="mb-8 md:mb-12">
-            <nuxt-link to="/galerija" class="btn max-w-xs"> Daugiau informacijos »</nuxt-link>
+            <nuxt-link to="/galerija" class="btn max-w-xs">
+              Daugiau informacijos »
+            </nuxt-link>
           </div>
           <div class="w-12 h-12 mx-auto">
             <img class="" src="~/assets/img/arrow-down.svg" alt="arrow">
@@ -74,7 +76,9 @@
             <nuxt-link to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas" class="block shadow-xl">
               <img class="w-full mb-4 md:mb-8" src="~/assets/img/thumbs/5.jpg" alt="">
               <div class="px-2">
-                <p class="text-center md:text-3xl mb-4 md:mb-8">Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas</p>
+                <p class="text-center md:text-3xl mb-4 md:mb-8">
+                  Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas
+                </p>
                 <div class="max-w-xs mx-auto pb-8 md:pb-12">
                   <div class="btn btn--short">
                     Plačiau »
@@ -112,14 +116,13 @@
                 </div>
               </div>
             </nuxt-link>
-            <a href="#" class="block shadow-xl">
-            </a>
+            <a href="#" class="block shadow-xl" />
           </div>
         </div>
       </div>
     </section>
 
-    <Banner></Banner>
+    <Banner />
 
     <section class="py-8 md:py-16">
       <div class="container">

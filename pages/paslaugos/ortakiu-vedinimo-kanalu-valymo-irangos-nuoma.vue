@@ -25,12 +25,12 @@
               <a href="tel:+37067619114" class="btn max-w-xs mygtuks">Skambinti</a>
             </div>
           </div>
-          <Sidebar></Sidebar>
+          <Sidebar />
         </div>
       </div>
     </main>
 
-    <Banner></Banner>
+    <Banner />
   </div>
 </template>
 

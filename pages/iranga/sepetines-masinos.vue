@@ -19,7 +19,7 @@
           <div class="flex-1 lg:pr-16">
             <h1 class="mb-10 font-semibold text-3xl md:text-5xl">
               Šepetinės mašinos
-              </h1>
+            </h1>
             <div class="mb-8">
               <video controls>
                 <source src="~/assets/video/sepetine-masina-1.mp4" type="video/mp4">
@@ -102,7 +102,7 @@
                 Svoris: 16 kg
               </li>
             </ul>
-<!--            niu-->
+            <!--            niu-->
             <h2 class="mb-10 font-semibold text-3xl md:text4xl">
               Šepetinė mašina L
             </h2>
@@ -222,7 +222,6 @@
                 Nerūdijančio plieno rėmas
               </li>
             </ul>
-
           </div>
           <Sidebar />
         </div>

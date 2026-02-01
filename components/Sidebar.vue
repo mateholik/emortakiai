@@ -18,7 +18,7 @@
       Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas
     </nuxt-link>
 
-      <nuxt-link to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class="flex items-center mb-8">
+    <nuxt-link to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Gyvenamųjų namų ventiliacijos kanalų (šachtų) dezinfekcija
     </nuxt-link>
@@ -30,7 +30,7 @@
 
     <nuxt-link to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
-        Ortakių, vėdinimo kanalų valymo įrangos nuoma
+      Ortakių, vėdinimo kanalų valymo įrangos nuoma
     </nuxt-link>
   </div>
 </template>

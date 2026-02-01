@@ -7,17 +7,24 @@
             <h3 class="mb-4 text-3xl font-semibold text-white">
               Navigacija
             </h3>
-            <nuxt-link to="/apie" class="block mb-2 text-2xl"
-              >Apie mus</nuxt-link
+            <nuxt-link
+              to="/apie"
+              class="block mb-2 text-2xl"
             >
+              Apie mus
+            </nuxt-link>
             <nuxt-link
               to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu"
               class="block mb-2 text-2xl"
-              >Paslaugos</nuxt-link
             >
-            <nuxt-link to="/galerija" class="block mb-2 text-2xl"
-              >Atliktų darbų galerija</nuxt-link
+              Paslaugos
+            </nuxt-link>
+            <nuxt-link
+              to="/galerija"
+              class="block mb-2 text-2xl"
             >
+              Atliktų darbų galerija
+            </nuxt-link>
           </div>
           <div>
             <div class="md:flex">
@@ -34,7 +41,7 @@
                       class="w-8 mr-4"
                       src="~/assets/img/phone.svg"
                       alt="phone"
-                    />
+                    >
                     +370 6 7619 114
                   </a>
                   <a
@@ -45,7 +52,7 @@
                       class="w-8 mr-4"
                       src="~/assets/img/phone.svg"
                       alt="phone"
-                    />
+                    >
                     +370 6 0736 036
                   </a>
                   <a
@@ -56,7 +63,7 @@
                       class="w-8 mr-4"
                       src="~/assets/img/mail.svg"
                       alt="mail"
-                    />
+                    >
                     info@emortakiuvalymas.lt
                   </a>
                   <a
@@ -64,7 +71,7 @@
                     target="_blank"
                     class="flex items-center mb-2 text-2xl"
                   >
-                    <img class="w-8 mr-4" src="~/assets/img/fb.svg" alt="fb" />
+                    <img class="w-8 mr-4" src="~/assets/img/fb.svg" alt="fb">
                     Sekite mus facebook'e!
                   </a>
                 </div>
@@ -74,7 +81,7 @@
                   Darbo Laikas
                 </h3>
                 <p>
-                  I-IV: 08:00 - 19:00 <br />
+                  I-IV: 08:00 - 19:00 <br>
                   V: 08:00 - 19:00
                 </p>
               </div>
@@ -83,7 +90,7 @@
                   Mus Rasite
                 </h3>
                 <p>
-                  Vilniaus mieste <br />
+                  Vilniaus mieste <br>
                   Vilniaus miesto apskrityje
                 </p>
               </div>
@@ -93,9 +100,9 @@
       </div>
     </div>
     <div class="py-6 text-center border-t border-gray-700">
-      <span class="text-2xl text-white text-gray-500"
-        >{{ currentYear }} EM Ortakių Valymas</span
-      >
+      <span
+        class="text-2xl text-white text-gray-500"
+      >{{ currentYear }} EM Ortakių Valymas</span>
     </div>
   </footer>
 </template>
@@ -103,11 +110,11 @@
 <script>
 export default {
   computed: {
-    currentYear() {
-      return new Date().getFullYear();
+    currentYear () {
+      return new Date().getFullYear()
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

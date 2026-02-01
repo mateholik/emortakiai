@@ -7,10 +7,13 @@
             Industrielle Lüftungs- und Luftkanalreinigung
           </p>
           <h1 class="hero__title">
-            Industrielle Lüftungs- und Luftkanalreinigung für große Objekte in Deutschland
+            Industrielle Lüftungs- und Luftkanalreinigung für große Objekte in
+            Deutschland
           </h1>
           <p class="hero__lead">
-            Zertifizierte Reinigung von Lüftungssystemen in Industriehallen, Logistikzentren, Einkaufszentren und Produktionsstätten – ohne Demontage und ohne Produktionsstillstand.
+            Zertifizierte Reinigung von Lüftungssystemen in Industriehallen,
+            Logistikzentren, Einkaufszentren und Produktionsstätten – ohne
+            Demontage und ohne Produktionsstillstand.
           </p>
           <ul class="hero__list">
             <li
@@ -37,7 +40,9 @@
     <section id="trust" class="section section--muted">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Vertrauen</p>
+          <p class="section-eyebrow">
+            Vertrauen
+          </p>
           <h2 class="section-title">
             Vertrauen für Großobjekte
           </h2>
@@ -60,12 +65,15 @@
     <section id="leistungen" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Leistungen</p>
+          <p class="section-eyebrow">
+            Leistungen
+          </p>
           <h2 class="section-title">
             Unsere Leistungen für Industrie &amp; Gewerbe
           </h2>
           <p class="section-lead">
-            Spezialisierte Reinigungslösungen für Fett-, Staub- und Industrieablagerungen
+            Spezialisierte Reinigungslösungen für Fett-, Staub- und
+            Industrieablagerungen
           </p>
         </div>
         <div class="services-grid">
@@ -82,7 +90,10 @@
               {{ service.description }}
             </p>
             <ul class="check-list">
-              <li v-for="(feature, featureIndex) in service.features" :key="`feature-${index}-${featureIndex}`">
+              <li
+                v-for="(feature, featureIndex) in service.features"
+                :key="`feature-${index}-${featureIndex}`"
+              >
                 {{ feature }}
               </li>
             </ul>
@@ -93,10 +104,15 @@
             Nicht angeboten über diese Landingpage
           </h3>
           <p class="not-offered-card__description">
-            Für klare Lead-Qualifizierung konzentrieren wir uns ausschließlich auf große Industrie- und Gewerbeflächen.
+            Für klare Lead-Qualifizierung konzentrieren wir uns ausschließlich
+            auf große Industrie- und Gewerbeflächen.
           </p>
           <ul class="chip-list">
-            <li v-for="(item, index) in notOffered" :key="`not-offered-${index}`" class="chip">
+            <li
+              v-for="(item, index) in notOffered"
+              :key="`not-offered-${index}`"
+              class="chip"
+            >
               {{ item }}
             </li>
           </ul>
@@ -107,7 +123,9 @@
     <section id="warum" class="section section--muted">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Warum wir</p>
+          <p class="section-eyebrow">
+            Warum wir
+          </p>
           <h2 class="section-title">
             Warum Unternehmen uns wählen
           </h2>
@@ -132,7 +150,9 @@
     <section id="ablauf" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Ablauf</p>
+          <p class="section-eyebrow">
+            Ablauf
+          </p>
           <h2 class="section-title">
             Reinigungsablauf
           </h2>
@@ -162,12 +182,15 @@
     <section id="filter" class="section section--muted">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Lead Filter</p>
+          <p class="section-eyebrow">
+            Lead Filter
+          </p>
           <h2 class="section-title">
             Für wen ist dieser Service geeignet?
           </h2>
           <p class="section-lead">
-            Klare Abgrenzung zwischen Industrieaufträgen und Kleinanfragen sorgt für bessere Google-Ads-Performance und spart Ihrem Team Zeit.
+            Klare Abgrenzung zwischen Industrieaufträgen und Kleinanfragen sorgt
+            für bessere Google-Ads-Performance und spart Ihrem Team Zeit.
           </p>
         </div>
         <div class="filter-grid">
@@ -186,7 +209,10 @@
               ❌ Nicht geeignet für
             </h3>
             <ul class="check-list check-list--muted">
-              <li v-for="(item, index) in notSuitable" :key="`not-suitable-${index}`">
+              <li
+                v-for="(item, index) in notSuitable"
+                :key="`not-suitable-${index}`"
+              >
                 {{ item }}
               </li>
             </ul>
@@ -198,12 +224,15 @@
     <section id="galerie" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="section-eyebrow">Referenzen</p>
+          <p class="section-eyebrow">
+            Referenzen
+          </p>
           <h2 class="section-title">
             Abgeschlossene Projekte
           </h2>
           <p class="section-lead">
-            Vorher/Nachher, Ausrüstung und großflächige Projekte ohne Offenlegung sensibler Kundendaten.
+            Vorher/Nachher, Ausrüstung und großflächige Projekte ohne
+            Offenlegung sensibler Kundendaten.
           </p>
         </div>
         <Gallery />
@@ -221,7 +250,10 @@
               Projektanfrage für Großobjekte
             </h2>
             <p class="section-lead contact-card__lead">
-              Das Formular wird aktuell vorbereitet. Nutzen Sie die folgenden Pflichtfelder als Leitfaden und senden Sie uns Ihre Anfrage per E-Mail oder Telefon – wir antworten mit einer qualifizierten Einschätzung.
+              Das Formular wird aktuell vorbereitet. Nutzen Sie die folgenden
+              Pflichtfelder als Leitfaden und senden Sie uns Ihre Anfrage per
+              E-Mail oder Telefon – wir antworten mit einer qualifizierten
+              Einschätzung.
             </p>
           </div>
           <div class="contact-card__grid">
@@ -230,7 +262,10 @@
                 Pflichtfelder
               </h3>
               <ul class="check-list">
-                <li v-for="(field, index) in formFields" :key="`field-${index}`">
+                <li
+                  v-for="(field, index) in formFields"
+                  :key="`field-${index}`"
+                >
                   {{ field }}
                 </li>
               </ul>
@@ -250,7 +285,10 @@
                   📞 <a :href="`tel:${phoneNormalized}`">{{ phone }}</a>
                 </li>
                 <li>
-                  📧 <a href="mailto:info@emortakiuvalymas.lt">info@emortakiuvalymas.lt</a>
+                  📧
+                  <a
+                    href="mailto:info@emortakiuvalymas.lt"
+                  >info@emortakiuvalymas.lt</a>
                 </li>
                 <li>
                   Arbeitszeiten: Mo–Fr 08:00–19:00
@@ -278,7 +316,8 @@
 <script>
 import Gallery from '~/components/Gallery.vue'
 
-const pageTitle = 'Industrielle Lüftungs- und Luftkanalreinigung | EM Ortakių Valymas'
+const pageTitle =
+  'Industrielle Lüftungs- und Luftkanalreinigung | EM Ortakių Valymas'
 const pageDescription =
   'Zertifizierte Reinigung von Lüftungssystemen für Industriehallen, Logistikzentren und Einkaufszentren – ohne Demontage, mit Fotodokumentation und EU-Lizenz.'
 
@@ -286,7 +325,7 @@ export default {
   components: {
     Gallery
   },
-  data() {
+  data () {
     return {
       phone: '+370 676 19 114',
       heroBullets: [
@@ -330,33 +369,40 @@ export default {
       whyUs: [
         {
           title: 'Kein Produktionsstopp erforderlich',
-          body: 'Wir arbeiten parallel zu Ihren Prozessen und minimieren Ausfallzeiten in Hallen, Lagern oder Einkaufszentren.'
+          body:
+            'Wir arbeiten parallel zu Ihren Prozessen und minimieren Ausfallzeiten in Hallen, Lagern oder Einkaufszentren.'
         },
         {
           title: 'Keine Demontage der Lüftungskanäle',
-          body: 'Unsere Systeme reinigen von innen heraus – zuverlässig, schnell und sicher für die bestehende Infrastruktur.'
+          body:
+            'Unsere Systeme reinigen von innen heraus – zuverlässig, schnell und sicher für die bestehende Infrastruktur.'
         },
         {
           title: 'Schneller & kontrollierter Prozess',
-          body: 'Planbare Einsätze mit klaren Zeitfenstern, abgestimmt auf interne Sicherheits- und Freigabeprozesse.'
+          body:
+            'Planbare Einsätze mit klaren Zeitfenstern, abgestimmt auf interne Sicherheits- und Freigabeprozesse.'
         },
         {
           title: 'Fotodokumentation',
-          body: 'Vorher/Nachher-Fotos für interne Audits, Behörden und Qualitätsnachweise inklusive.'
+          body:
+            'Vorher/Nachher-Fotos für interne Audits, Behörden und Qualitätsnachweise inklusive.'
         },
         {
           title: 'Erfahrung mit komplexen Anlagen',
-          body: 'Mehrsprachige Teams und EU-Projekte in Logistik, Produktion und Handel.'
+          body:
+            'Mehrsprachige Teams und EU-Projekte in Logistik, Produktion und Handel.'
         }
       ],
       processSteps: [
         {
           title: 'Vorbereitung des Arbeitsbereichs',
-          body: 'Absicherung, Zugangsklärung und Schutz sensibler Bereiche ohne Unterbrechung der Betriebsabläufe.'
+          body:
+            'Absicherung, Zugangsklärung und Schutz sensibler Bereiche ohne Unterbrechung der Betriebsabläufe.'
         },
         {
           title: 'Analyse & Verschmutzungsbewertung',
-          body: 'Technische Inspektion Ihrer Lüftungssysteme zur Definition des Reinigungsumfangs.'
+          body:
+            'Technische Inspektion Ihrer Lüftungssysteme zur Definition des Reinigungsumfangs.'
         },
         {
           title: 'Fotoinspektion vor der Reinigung',
@@ -364,19 +410,23 @@ export default {
         },
         {
           title: 'Mechanische Reinigung mit Bürstensystemen',
-          body: 'Gezielte Entfernung von Fett-, Staub- und Industrieablagerungen mit Spezialausrüstung.'
+          body:
+            'Gezielte Entfernung von Fett-, Staub- und Industrieablagerungen mit Spezialausrüstung.'
         },
         {
           title: 'Einsatz spezieller Reinigungsmittel',
-          body: 'Bei Fetten und harzigen Rückständen verwenden wir kontrollierte Schaum- und Chemieverfahren.'
+          body:
+            'Bei Fetten und harzigen Rückständen verwenden wir kontrollierte Schaum- und Chemieverfahren.'
         },
         {
           title: 'Fotoinspektion nach der Reinigung',
-          body: 'Vergleichsdokumentation zur Qualitätssicherung und für Behörden.'
+          body:
+            'Vergleichsdokumentation zur Qualitätssicherung und für Behörden.'
         },
         {
           title: 'Funktionsprüfung & Übergabe',
-          body: 'Abschlussbericht, Empfehlungen und vorbereitete Dokumente für Audits.'
+          body:
+            'Abschlussbericht, Empfehlungen und vorbereitete Dokumente für Audits.'
         }
       ],
       suitable: [
@@ -386,7 +436,11 @@ export default {
         'Produktionsbetriebe',
         'Große Gewerbeobjekte'
       ],
-      notSuitable: ['Kleine private Aufträge', 'Einzelwohnungen', 'Kleine Küchen'],
+      notSuitable: [
+        'Kleine private Aufträge',
+        'Einzelwohnungen',
+        'Kleine Küchen'
+      ],
       formFields: [
         'Objekttyp (Dropdown)',
         'Geschätzte Fläche (m²)',
@@ -397,27 +451,34 @@ export default {
     }
   },
   computed: {
-    phoneNormalized() {
+    phoneNormalized () {
       return this.phone.replace(/\s+/g, '')
     }
   },
   methods: {
-    formatStepNumber(index) {
+    formatStepNumber (index) {
       return (index + 1).toString().padStart(2, '0')
     }
   },
-  head() {
+  head () {
     return {
       title: pageTitle,
       meta: [
         { hid: 'description', name: 'description', content: pageDescription },
-        { hid: 'keywords', name: 'keywords', content: 'Industrielle Lüftungsreinigung, Lüftungskanalreinigung Industrie, Reinigung Lüftungsanlagen Gewerbe, Lüftungsreinigung Logistikhalle' },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'Industrielle Lüftungsreinigung, Lüftungskanalreinigung Industrie, Reinigung Lüftungsanlagen Gewerbe, Lüftungsreinigung Logistikhalle'
+        },
         { hid: 'og:title', property: 'og:title', content: pageTitle },
-        { hid: 'og:description', property: 'og:description', content: pageDescription }
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: pageDescription
+        }
       ],
-      link: [
-        { rel: 'canonical', href: 'https://emortakiuvalymas.lt/de' }
-      ]
+      link: [{ rel: 'canonical', href: 'https://emortakiuvalymas.lt/de' }]
     }
   }
 }
@@ -592,7 +653,7 @@ export default {
   line-height: 1.5;
 }
 .check-list li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0.6em;
@@ -770,8 +831,12 @@ export default {
   min-width: 230px;
 }
 .hero-bg {
-  background-image: linear-gradient(115deg, rgba(5, 10, 22, 0.92), rgba(12, 34, 64, 0.7)),
-    url('~assets/img/bg.jpg');
+  background-image: linear-gradient(
+      115deg,
+      rgba(5, 10, 22, 0.92),
+      rgba(12, 34, 64, 0.7)
+    ),
+    url("~assets/img/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

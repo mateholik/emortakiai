@@ -13,7 +13,7 @@ app.post('/', function (req, res) {
   console.log(req.body)
 
   sendMail(req.body.name, req.body.email, req.body.msg)
-  res.status(200).json({ 'message': 'OH YEAH' })
+  res.status(200).json({ message: 'OH YEAH' })
 })
 module.exports = {
   path: '/api/contact',
@@ -21,7 +21,7 @@ module.exports = {
 }
 
 const sendMail = (name, email, msg) => {
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: 'remeza.serveriai.lt',
     port: 465,
     secure: true, // secure:true for port 465, secure:false for port 587

@@ -3,9 +3,9 @@
     <section class="bg py-12">
       <div class="container">
         <div class="text-center">
-<!--          <h1 class="text-white font-semibold text-4xl md:text-5xl">-->
-<!--            Įranga-->
-<!--          </h1>-->
+          <!--          <h1 class="text-white font-semibold text-4xl md:text-5xl">-->
+          <!--            Įranga-->
+          <!--          </h1>-->
           <div class="mb-4">
             <img class="h-32 w-32 mx-auto" src="~/assets/img/iranga/logo partnerio.png" alt="partner logo">
           </div>

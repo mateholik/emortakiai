@@ -18,18 +18,18 @@
               Gyvenamųjų namų ventiliacijos kanalų (šachtų) dezinfekcija
             </h1>
             <p class="py-8">
-            Esame licencijuota įmonė pagal VASPVT (valstybinė akreditavimo sveikatos priežiūros veiklai tarnyba prie Sveikatos apsaugos ministerijos)
+              Esame licencijuota įmonė pagal VASPVT (valstybinė akreditavimo sveikatos priežiūros veiklai tarnyba prie Sveikatos apsaugos ministerijos)
             </p>
-             <div>
+            <div>
               <Gallery :paveiksliukai="images" />
             </div>
           </div>
-          <Sidebar></Sidebar>
+          <Sidebar />
         </div>
       </div>
     </main>
 
-    <Banner></Banner>
+    <Banner />
   </div>
 </template>
 

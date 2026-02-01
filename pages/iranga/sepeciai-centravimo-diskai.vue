@@ -34,7 +34,8 @@
               </a>
             </div>
             <p class="mb-12">
-              <strong>Paskirtis:</strong> ortakių, kaminų, ventiliacinių šachtų vidaus paviršių valymas. Platus šepečių asortimentas.</p>
+              <strong>Paskirtis:</strong> ortakių, kaminų, ventiliacinių šachtų vidaus paviršių valymas. Platus šepečių asortimentas.
+            </p>
             <h3 class="mb-10 font-semibold text-3xl md:text4xl">
               Tipai:
             </h3>
@@ -83,7 +84,7 @@
                     :paveiksliukai="sepetys5"
                   />
                 </div>
-                </li>
+              </li>
             </ul>
             <p><strong>Pastaba: </strong> šepečius galima pagaminti pagal individualius kliento poreikius</p>
             <br>
@@ -101,10 +102,12 @@
               </a>
             </div>
             <p class="mb-12">
-              <strong>Paskirtis:</strong> naudojami karu su šepetinėmis mašinomis ir lanksčiais velenais. Sumažina apkrovą velenui ir padeda centruoti šepetį ortakyje. Pagaminti iš plastiko. Jungtis M12.</p>
+              <strong>Paskirtis:</strong> naudojami karu su šepetinėmis mašinomis ir lanksčiais velenais. Sumažina apkrovą velenui ir padeda centruoti šepetį ortakyje. Pagaminti iš plastiko. Jungtis M12.
+            </p>
 
             <p class="mb-12">
-              <strong>Diametrai:</strong> 150 - 400 mm</p>
+              <strong>Diametrai:</strong> 150 - 400 mm
+            </p>
           </div>
           <Sidebar />
         </div>

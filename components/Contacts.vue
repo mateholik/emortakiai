@@ -12,7 +12,7 @@
                 class="w-8 mr-4"
                 src="~/assets/img/phone-dark.svg"
                 alt="phone"
-              />
+              >
               +370 6 7619 114
             </a>
             <a href="tel:+37060736036" class="flex items-center mb-2 text-2xl">
@@ -20,7 +20,7 @@
                 class="w-8 mr-4"
                 src="~/assets/img/phone-dark.svg"
                 alt="phone"
-              />
+              >
               +370 6 0736 036
             </a>
             <a
@@ -31,7 +31,7 @@
                 class="w-8 mr-4"
                 src="~/assets/img/mail-dark.svg"
                 alt="mail"
-              />
+              >
               info@emortakiuvalymas.lt
             </a>
             <a
@@ -39,7 +39,7 @@
               target="_blank"
               class="flex items-center mb-2 text-2xl"
             >
-              <img class="w-8 mr-4" src="~/assets/img/fb-dark.svg" alt="fb" />
+              <img class="w-8 mr-4" src="~/assets/img/fb-dark.svg" alt="fb">
               Sekite mus facebook'e!
             </a>
           </p>
@@ -49,7 +49,7 @@
             Darbo Laikas
           </h3>
           <p class="text-2xl">
-            I-IV: 08:00 - 19:00 <br />
+            I-IV: 08:00 - 19:00 <br>
             V: 08:00 - 19:00
           </p>
         </div>
@@ -59,7 +59,7 @@
           class="max-w-xs mx-auto mt-16 md:mx-0"
           width="320"
           height="317"
-        />
+        >
       </div>
       <div class="my-16 md:my-0 md:w-1/2">
         <img
@@ -67,7 +67,7 @@
           height="877"
           src="~/assets/img/sertifikatas-pilnas.jpeg"
           alt="sertifikatas"
-        />
+        >
       </div>
     </div>
   </div>
@@ -75,8 +75,8 @@
 
 <script>
 export default {
-  name: "Contacts"
-};
+  name: 'Contacts'
+}
 </script>
 
 <style scoped lang="scss"></style>

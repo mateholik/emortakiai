@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Header v-if="showChrome"></Header>
+    <Header v-if="showChrome" />
     <transition name="slide-left">
       <nuxt />
     </transition>
-    <Footer v-if="showChrome"></Footer>
+    <Footer v-if="showChrome" />
     <Cookies v-if="showChrome" />
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
-import Cookies from "~/components/Cookies.vue";
+import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
+import Cookies from '~/components/Cookies.vue'
 export default {
   components: {
     Header,
@@ -20,12 +20,12 @@ export default {
     Cookies
   },
   computed: {
-    showChrome() {
+    showChrome () {
       const path = this.$route.path || ''
       return path !== '/de' && path !== '/de/'
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

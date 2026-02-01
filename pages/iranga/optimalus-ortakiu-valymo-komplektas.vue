@@ -54,7 +54,8 @@
                 Gofruota rankovė (10 m)
               </li>
               <li class="mb-4">
-                Šepečių rinkinys (7vnt). Apima 7 dažniausiai naudojamus šepečius. Taip pat yra galimybė pasirinki norimus šepečius.              </li>
+                Šepečių rinkinys (7vnt). Apima 7 dažniausiai naudojamus šepečius. Taip pat yra galimybė pasirinki norimus šepečius.
+              </li>
               <li class="mb-4">
                 Centravimo diskai (250 mm, 400 mm)
               </li>

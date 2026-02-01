@@ -18,9 +18,9 @@
             Naršymas svetainėje yra tolygus sutikimui su slapukų naudojimu.
           </div>
           <div
-            @click="setCookies"
             style=" background: linear-gradient(180.76deg, #1a9cfc 6.4%, #1a9cfc 96.45%)"
             class="inline-block px-4 py-2 text-white rounded-lg cursor-pointer"
+            @click="setCookies"
           >
             Gerai
           </div>
@@ -32,27 +32,27 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       agree: null
-    };
+    }
   },
-  mounted() {
-    if (localStorage.getItem("cookies")) {
-      this.agree = true;
+  mounted () {
+    if (localStorage.getItem('cookies')) {
+      this.agree = true
     } else {
       setTimeout(() => {
-        this.agree = false;
-      }, 1000);
+        this.agree = false
+      }, 1000)
     }
   },
   methods: {
-    setCookies() {
-      localStorage.setItem("cookies", true);
-      this.agree = true;
+    setCookies () {
+      localStorage.setItem('cookies', true)
+      this.agree = true
     }
   }
-};
+}
 </script>
 
 <style></style>
