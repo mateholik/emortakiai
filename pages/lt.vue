@@ -4,7 +4,7 @@
 
 <script>
 import IndustryLanding from '~/components/IndustryLanding.vue'
-import deConfig from '~/js/landingIndustry/de'
+import ltConfig from '~/js/landingIndustry/lt'
 
 export default {
   components: {
@@ -13,7 +13,7 @@ export default {
   layout: 'landing',
   data () {
     return {
-      landingConfig: deConfig
+      landingConfig: ltConfig
     }
   },
   head () {
@@ -33,3 +33,4 @@ export default {
   }
 }
 </script>
+
