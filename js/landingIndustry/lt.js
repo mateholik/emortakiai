@@ -1,5 +1,3 @@
-const phoneDisplay = '+370 676 19 114'
-const phoneHref = 'tel:+37067619114'
 const emailHref = 'mailto:info@emortakiuvalymas.lt'
 
 export default {
@@ -51,7 +49,7 @@ export default {
         description:
           'Sausas vėdinimo kanalų ir ventiliatorių valymas pramonės ir verslo objektuose, kuriuose cirkuliuoja dideli oro kiekiai.',
         features: [
-          'Mechaniniai šepetės',
+          'Mechaniniai šepečiai ir pramoniniai dulkių siurbliai',
           'Didelės galios vakuuminės sistemos',
           'Tinka dideliems oro kiekiams ir sudėtingiems išdėstymams'
         ]
@@ -137,8 +135,8 @@ export default {
     eyebrow: 'Projekto užklausa (lead filtras)',
     title: 'Projekto užklausa didelio masto objektams',
     lead:
-      'Forma šiuo metu ruošiama. Prašome vadovautis toliau pateiktais privalomais laukais ir atsiųsti mums užklausą el. paštu arba telefonu – atsakysime pateikdami kvalifikuotą įvertinimą.',
-    fieldsTitle: 'Privalomi laukai',
+      'Norėdami gauti tikslų įvertinimą, atsiųskite užklausą el. paštu. Laiške nurodykite žemiau pateiktus privalomus laukus – atsakysime pateikdami kvalifikuotą įvertinimą.',
+    fieldsTitle: 'Prašome paminėti',
     fields: [
       'Objekto tipas (išskleidžiamasis meniu)',
       'Apskaičiuotas plotas (m²)',
@@ -150,17 +148,12 @@ export default {
     details: [
       { text: 'EM Ortakių valymas' },
       { text: 'Licencijuota įmonė (ES) · Veiklos teritorija: Vokietija' },
-      { prefix: '📞', text: phoneDisplay, href: phoneHref },
       { prefix: '📧', text: 'info@emortakiuvalymas.lt', href: emailHref },
       { text: 'Darbo laikas: pirmadieniais–penktadieniais 08:00–19:00' }
     ],
     primaryCta: {
-      text: 'Siųsti užklausą',
+      text: 'Siųsti užklausą el. paštu',
       href: 'mailto:info@emortakiuvalymas.lt?subject=Projekto%20uzklausa%20(pramoninis%20objektas)'
-    },
-    secondaryCta: {
-      text: 'Skambinti dabar',
-      href: phoneHref
     }
   },
   seo: {

@@ -1,5 +1,3 @@
-const phoneDisplay = '+370 676 19 114'
-const phoneHref = 'tel:+37067619114'
 const emailHref = 'mailto:info@emortakiuvalymas.lt'
 
 export default {
@@ -122,24 +120,19 @@ export default {
     eyebrow: 'Projektanfrage (Lead Filter)',
     title: 'Projektanfrage für Großobjekte',
     lead:
-      'Das Formular wird aktuell vorbereitet. Nutzen Sie die folgenden Pflichtfelder als Leitfaden und senden Sie uns Ihre Anfrage per E-Mail oder Telefon – wir antworten mit einer qualifizierten Einschätzung.',
+      'Bitte senden Sie Ihre Anfrage per E-Mail. Damit wir Ihr Projekt schnell einschätzen können, nennen Sie bitte die folgenden Pflichtangaben – wir antworten mit einer qualifizierten Ersteinschätzung.',
     fieldsTitle: 'Pflichtfelder',
     fields: ['Objekttyp (Dropdown)', 'Geschätzte Fläche (m²)', 'Stadt / Region', 'Art der Verschmutzung', 'Benötigen Sie eine Dokumentation? (Ja/Nein)'],
     contactTitle: 'Kontakt',
     details: [
       { text: 'EM Ortakių Valymas' },
       { text: 'Lizenzierte Firma (EU) · Einsatzgebiet: Deutschland' },
-      { prefix: '📞', text: phoneDisplay, href: phoneHref },
       { prefix: '📧', text: 'info@emortakiuvalymas.lt', href: emailHref },
       { text: 'Arbeitszeiten: Mo–Fr 08:00–19:00' }
     ],
     primaryCta: {
-      text: 'Anfrage für Großobjekt senden',
+      text: 'Anfrage per E-Mail senden',
       href: 'mailto:info@emortakiuvalymas.lt?subject=Projektanfrage%20Industrie'
-    },
-    secondaryCta: {
-      text: 'Jetzt anrufen',
-      href: phoneHref
     }
   },
   seo: {
