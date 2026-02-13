@@ -45,6 +45,8 @@ function suppressGoogleUiArtifacts () {
   // Sometimes Google injects inline `top` offsets; force reset.
   try {
     document.body.style.top = '0px'
+    document.documentElement.style.marginTop = '0px'
+    document.body.style.marginTop = '0px'
   } catch (e) {}
 }
 
@@ -53,7 +55,7 @@ function startSuppressLoop () {
   const start = Date.now()
   const tick = () => {
     suppressGoogleUiArtifacts()
-    if (Date.now() - start < 5000) {
+    if (Date.now() - start < 15000) {
       window.setTimeout(tick, 250)
     }
   }
