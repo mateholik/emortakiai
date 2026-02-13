@@ -5,15 +5,16 @@
         <SmartLink to="/" class-name="logo block mr-16">
           <img class="w-48 md:w-auto" src="~/assets/img/logo.svg" alt="logo">
         </SmartLink>
-        <ul class="hidden md:flex justify-end items-center flex-1 h-full ">
+        <ul class="hidden md:flex justify-end items-center flex-1 h-full main-menu">
           <li class="h-full">
-            <SmartLink to="/apie" class-name="px-4 lg:px-6 flex justify-center items-center h-full font-semibold">
+            <SmartLink to="/apie" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Apie
             </SmartLink>
           </li>
           <li class="h-full">
-            <div class="px-4 lg:px-6 flex justify-center items-center h-full font-semibold cursor-pointer">
-              Paslaugos
+            <div class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold cursor-pointer">
+              <span>Paslaugos</span>
+              <span class="menu-caret ml-2" aria-hidden="true">▾</span>
             </div>
             <ul class="submenu bg-white z-10">
               <li>
@@ -49,18 +50,19 @@
             </ul>
           </li>
           <li class="h-full">
-            <SmartLink to="/galerija" class-name="px-4 lg:px-6 flex justify-center items-center h-full font-semibold">
+            <SmartLink to="/galerija" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Galerija
             </SmartLink>
           </li>
           <li class="h-full">
-            <SmartLink to="/technologijos" class-name="px-4 lg:px-6 flex justify-center items-center h-full font-semibold">
+            <SmartLink to="/technologijos" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Technologijos
             </SmartLink>
           </li>
           <li class="h-full">
-            <div class="px-4 lg:px-6 flex justify-center items-center h-full font-semibold cursor-pointer">
-              Parduodama įranga
+            <div class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold cursor-pointer">
+              <span>Parduodama įranga</span>
+              <span class="menu-caret ml-2" aria-hidden="true">▾</span>
             </div>
             <ul class="submenu submenu-iranga bg-white z-10">
               <li>
@@ -96,21 +98,21 @@
             </ul>
           </li>
           <li class="h-full">
-            <SmartLink to="/kontaktai" class-name="px-4 lg:px-6 flex justify-center items-center h-full font-semibold">
+            <SmartLink to="/kontaktai" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Kontaktai
             </SmartLink>
           </li>
           <li class="h-full lang-switcher px-2 flex items-center">
             <button
-              class="lang-switcher__btn px-4 lg:px-4 flex items-center font-semibold focus:outline-none"
+              class="lang-switcher__btn px-3 lg:px-3 flex items-center font-semibold focus:outline-none"
               type="button"
               aria-haspopup="true"
               :aria-expanded="showLangMenu ? 'true' : 'false'"
               @click.stop="toggleLangMenu"
               @keydown.esc.prevent="closeLangMenu"
+              :aria-label="`Language: ${currentLang.label}`"
             >
               <img class="lang-switcher__flag" :src="currentLang.flag" :alt="currentLang.label">
-              <span class="ml-2">{{ currentLang.code.toUpperCase() }}</span>
               <span class="ml-2 lang-switcher__caret" aria-hidden="true">▾</span>
             </button>
             <ul v-if="showLangMenu" class="lang-switcher__menu bg-white z-20">
@@ -123,9 +125,10 @@
                   class="lang-switcher__option"
                   type="button"
                   @click="selectLanguage(lang.code)"
+                  :aria-label="lang.label"
+                  :title="lang.label"
                 >
                   <img class="lang-switcher__flag" :src="lang.flag" :alt="lang.label">
-                  <span class="ml-2">{{ lang.label }}</span>
                 </button>
               </li>
             </ul>
@@ -169,9 +172,10 @@
                 class="lang-switcher__pill"
                 :class="{'lang-switcher__pill--active': lang.code === currentLangCode}"
                 @click="selectLanguage(lang.code)"
+                :aria-label="lang.label"
+                :title="lang.label"
               >
                 <img class="lang-switcher__flag" :src="lang.flag" :alt="lang.label">
-                <span class="ml-2">{{ lang.code.toUpperCase() }}</span>
               </button>
             </div>
           </li>
@@ -326,13 +330,9 @@ export default {
       this.mobSubMenu = false
       this.mobSubMenu2 = false
       this.showLangMenu = false
-      this.currentLangCode = 'lt'
-      try {
-        window.__em_translate_lang__ = 'lt'
-        if (this.$translate && typeof this.$translate.reset === 'function') {
-          this.$translate.reset()
-        }
-      } catch (e) {}
+      this.currentLangCode = this.getCurrentLang()
+      try { window.__em_translate_lang__ = this.currentLangCode } catch (e) {}
+      this.syncLangIndicator()
       try {
         window.scrollTo({
           top: 'header',
@@ -368,12 +368,52 @@ export default {
       if (e.key === 'Escape') { this.closeLangMenu() }
     },
     getCurrentLang () {
+      const cookieLang = this.getGoogTransLang()
+      const comboLang = this.getComboLang()
       try {
         if (this.$translate && typeof this.$translate.getLang === 'function') {
-          return this.$translate.getLang()
+          const current = this.$translate.getLang()
+          return comboLang || cookieLang || current
         }
       } catch (e) {}
-      return 'lt'
+      return comboLang || cookieLang || 'lt'
+    },
+    getComboLang () {
+      try {
+        const combo = document.querySelector('.goog-te-combo')
+        if (!combo) return null
+        const value = (combo.value || '').toLowerCase()
+        return ['lt', 'en', 'de', 'pl'].includes(value) ? value : null
+      } catch (e) {
+        return null
+      }
+    },
+    getGoogTransLang () {
+      try {
+        const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/)
+        if (!match) return null
+        const value = decodeURIComponent(match[1] || '')
+        const m2 = value.match(/\/([a-z]{2})(?:$|\/)/i)
+        const lang = m2 ? m2[1].toLowerCase() : null
+        return ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : null
+      } catch (e) {
+        return null
+      }
+    },
+    syncLangIndicator () {
+      let attemptsLeft = 10
+      const tick = () => {
+        const next = this.getCurrentLang()
+        if (next && next !== this.currentLangCode) {
+          this.currentLangCode = next
+          try { window.__em_translate_lang__ = next } catch (e) {}
+        }
+        attemptsLeft -= 1
+        if (attemptsLeft > 0) {
+          setTimeout(tick, 200)
+        }
+      }
+      setTimeout(tick, 0)
     },
     selectLanguage (code) {
       const safe = ['lt', 'en', 'de', 'pl'].includes(code) ? code : 'lt'
@@ -388,6 +428,7 @@ export default {
       try {
         window.__em_translate_lang__ = safe
       } catch (e) {}
+      this.syncLangIndicator()
     }
   }
 }
@@ -423,17 +464,23 @@ export default {
 nav {
 animation: 1s appear;
 margin: auto;
+.main-menu > li > a,
+.main-menu > li > div,
+.main-menu > li > button {
+  font-size: 1.45rem;
+}
+.menu-caret {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  line-height: 1;
+}
 li.lang-switcher {
   position: relative;
 }
 .lang-switcher__btn {
   height: 100%;
   color: #3A425D;
-  border-radius: 6px;
-  &:hover {
-    background: #FAFAFA;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.11);
-  }
+  background: transparent;
 }
 .lang-switcher__caret {
   font-size: 1.2rem;
@@ -443,10 +490,10 @@ li.lang-switcher {
   position: absolute;
   right: 0;
   top: 100%;
-  min-width: 16rem;
-  border: 1px solid #d8dade;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  border-radius: 8px;
+  width: 5.2rem;
+  border: 1px solid #283650;
+  border-radius: 0;
+  box-shadow: -1px 0 0px 0px #fff, 1px 0 0px 0px #fff;
   overflow: hidden;
 }
 .lang-switcher__item {
@@ -459,12 +506,15 @@ li.lang-switcher {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 1.2rem 1.2rem;
+  justify-content: center;
+  padding: 1.2rem 0;
   font-weight: 600;
   color: #3A425D;
   background: #fff;
   &:hover {
-    background: #FAFAFA;
+    background: #3A425D;
+    color: #fff;
+    font-weight: 600;
   }
 }
 .lang-switcher__flag {
@@ -476,7 +526,7 @@ li.lang-switcher {
 .lang-switcher__pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.8rem 1.1rem;
+  padding: 0.6rem 0.9rem;
   border: 1px solid #d8dade;
   border-radius: 999px;
   font-weight: 700;

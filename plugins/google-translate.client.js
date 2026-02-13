@@ -3,7 +3,18 @@ const LANG_KEY = '__em_translate_lang__'
 
 function clearCookie (name) {
   if (!process.client) { return }
-  document.cookie = `${name}=; Path=/; Max-Age=0; SameSite=Lax`
+  const host = window.location.hostname
+  const base = `${name}=; Max-Age=0; SameSite=Lax`
+  // Try multiple variants because Google may set cookies with/without explicit domain.
+  document.cookie = `${base}; Path=/`
+  document.cookie = `${base}; Path=/; Domain=${host}`
+  document.cookie = `${base}; Path=/; Domain=.${host}`
+}
+
+function getCookie (name) {
+  if (!process.client) { return null }
+  const match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'))
+  return match ? decodeURIComponent(match[2]) : null
 }
 
 function ensureHiddenContainer () {
@@ -57,6 +68,21 @@ function getWindowLang () {
   return window[LANG_KEY] || 'lt'
 }
 
+function getLangFromGoogleCookie () {
+  const raw = getCookie(GOOGLE_COOKIE) || ''
+  const match = raw.match(/\/([a-z]{2})(?:$|\/)/i)
+  const lang = match ? match[1].toLowerCase() : null
+  return ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : null
+}
+
+function getLangFromCombo () {
+  if (!process.client) { return null }
+  const combo = document.querySelector('.goog-te-combo')
+  if (!combo) { return null }
+  const value = (combo.value || '').toLowerCase()
+  return ['lt', 'en', 'de', 'pl'].includes(value) ? value : null
+}
+
 function applyLanguage (lang) {
   const safe = ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : 'lt'
   setWindowLang(safe)
@@ -67,11 +93,27 @@ function applyLanguage (lang) {
   }
 
   const combo = document.querySelector('.goog-te-combo')
-  if (!combo) { return }
+  if (!combo) {
+    // If user is trying to reset to LT before widget is ready, hard reload to show original.
+    if (safe === 'lt') {
+      try { window.location.reload() } catch (e) {}
+    }
+    return
+  }
 
   // Default/original is usually empty value; but `lt` is also safe since pageLanguage is lt.
   combo.value = safe === 'lt' ? '' : safe
   combo.dispatchEvent(new Event('change'))
+
+  // Some pages get “stuck” translated even after switching back; reload if GT still thinks it's active.
+  if (safe === 'lt') {
+    setTimeout(() => {
+      const stillActive = getLangFromCombo() || getLangFromGoogleCookie()
+      if (stillActive) {
+        try { window.location.reload() } catch (e) {}
+      }
+    }, 300)
+  }
 }
 
 export default function ({ app, route }, inject) {
@@ -81,6 +123,9 @@ export default function ({ app, route }, inject) {
   const path = (route && route.path) || ''
   const isCuratedLander = /^(\/(de|lt|en|pl))\/?$/.test(path)
   if (isCuratedLander) { return }
+
+  const persisted = getLangFromCombo() || getLangFromGoogleCookie()
+  if (persisted) { setWindowLang(persisted) }
 
   const api = {
     getLang () {
@@ -117,12 +162,13 @@ export default function ({ app, route }, inject) {
   }
   loadScriptOnce()
 
-  // Route change => always reset to default (LT).
+  // Route change => sync active language from Google cookie (if translation persists).
   if (app && app.router) {
     app.router.afterEach((to) => {
       if (/^(\/(de|lt|en|pl))\/?$/.test(to.path)) { return }
-      api.reset()
-      setWindowLang('lt')
+      // Google may not update `googtrans` immediately on SPA navigations; combo is the most reliable source.
+      const active = getLangFromCombo() || getLangFromGoogleCookie()
+      setWindowLang(active || 'lt')
     })
   }
 }

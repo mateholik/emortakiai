@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" aria-label="English flag">
-  <rect width="24" height="16" fill="#fff"/>
-  <rect x="10.5" width="3" height="16" fill="#C8102E"/>
-  <rect y="6.5" width="24" height="3" fill="#C8102E"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" aria-label="United Kingdom flag">
+  <rect width="60" height="40" fill="#012169"/>
+
+  <!-- White diagonals -->
+  <polygon points="0,0 7,0 60,33 60,40 53,40 0,7" fill="#fff"/>
+  <polygon points="60,0 53,0 0,33 0,40 7,40 60,7" fill="#fff"/>
+
+  <!-- Red diagonals -->
+  <polygon points="0,0 4.2,0 60,34.2 60,40 55.8,40 0,5.8" fill="#C8102E"/>
+  <polygon points="60,0 55.8,0 0,34.2 0,40 4.2,40 60,5.8" fill="#C8102E"/>
+
+  <!-- White cross -->
+  <rect x="24" y="0" width="12" height="40" fill="#fff"/>
+  <rect x="0" y="14" width="60" height="12" fill="#fff"/>
+
+  <!-- Red cross -->
+  <rect x="26" y="0" width="8" height="40" fill="#C8102E"/>
+  <rect x="0" y="16" width="60" height="8" fill="#C8102E"/>
 </svg>
