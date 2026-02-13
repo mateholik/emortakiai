@@ -81,7 +81,8 @@ export default {
    */
   plugins: [
     { src: '~/plugins/cool-lightbox', ssr: true },
-    { src: '~/plugins/vuelidate', ssr: true }
+    { src: '~/plugins/vuelidate', ssr: true },
+    { src: '~/plugins/google-translate.client.js', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules

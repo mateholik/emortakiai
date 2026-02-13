@@ -1,0 +1,128 @@
+const GOOGLE_COOKIE = 'googtrans'
+const LANG_KEY = '__em_translate_lang__'
+
+function clearCookie (name) {
+  if (!process.client) { return }
+  document.cookie = `${name}=; Path=/; Max-Age=0; SameSite=Lax`
+}
+
+function ensureHiddenContainer () {
+  if (!process.client) { return }
+  if (document.getElementById('google_translate_element')) { return }
+  const el = document.createElement('div')
+  el.id = 'google_translate_element'
+  el.style.display = 'none'
+  document.body.appendChild(el)
+}
+
+function loadScriptOnce () {
+  if (!process.client) { return }
+  if (document.getElementById('google-translate-script')) { return }
+  const script = document.createElement('script')
+  script.id = 'google-translate-script'
+  script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+  script.async = true
+  document.head.appendChild(script)
+}
+
+function suppressGoogleUiArtifacts () {
+  if (!process.client) { return }
+  const banner = document.querySelector('iframe.goog-te-banner-frame')
+  if (banner && banner.parentNode) { banner.parentNode.removeChild(banner) }
+  const menuFrame = document.querySelector('iframe.goog-te-menu-frame')
+  if (menuFrame && menuFrame.parentNode) { menuFrame.parentNode.removeChild(menuFrame) }
+  // Sometimes Google injects inline `top` offsets; force reset.
+  try {
+    document.body.style.top = '0px'
+  } catch (e) {}
+}
+
+function startSuppressLoop () {
+  if (!process.client) { return }
+  const start = Date.now()
+  const tick = () => {
+    suppressGoogleUiArtifacts()
+    if (Date.now() - start < 5000) {
+      window.setTimeout(tick, 250)
+    }
+  }
+  tick()
+}
+
+function setWindowLang (lang) {
+  window[LANG_KEY] = ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : 'lt'
+}
+
+function getWindowLang () {
+  return window[LANG_KEY] || 'lt'
+}
+
+function applyLanguage (lang) {
+  const safe = ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : 'lt'
+  setWindowLang(safe)
+
+  // Google Translate uses `googtrans` cookie internally; we never set it, but we clear it on reset.
+  if (safe === 'lt') {
+    clearCookie(GOOGLE_COOKIE)
+  }
+
+  const combo = document.querySelector('.goog-te-combo')
+  if (!combo) { return }
+
+  // Default/original is usually empty value; but `lt` is also safe since pageLanguage is lt.
+  combo.value = safe === 'lt' ? '' : safe
+  combo.dispatchEvent(new Event('change'))
+}
+
+export default function ({ app, route }, inject) {
+  if (!process.client) { return }
+
+  // Keep curated landers clean (no widget, no cookies side-effects).
+  const path = (route && route.path) || ''
+  const isCuratedLander = /^(\/(de|lt|en|pl))\/?$/.test(path)
+  if (isCuratedLander) { return }
+
+  const api = {
+    getLang () {
+      return getWindowLang()
+    },
+    setLang (lang) {
+      applyLanguage(lang)
+      startSuppressLoop()
+    },
+    reset () {
+      applyLanguage('lt')
+      startSuppressLoop()
+    }
+  }
+
+  inject('translate', api)
+
+  // Always prepare widget for normal pages (hidden), so switching is instant.
+  ensureHiddenContainer()
+  window.googleTranslateElementInit = function () {
+    try {
+      // eslint-disable-next-line no-new
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: 'lt',
+          includedLanguages: 'lt,en,de,pl',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      )
+    } catch (e) {
+      // silent
+    }
+  }
+  loadScriptOnce()
+
+  // Route change => always reset to default (LT).
+  if (app && app.router) {
+    app.router.afterEach((to) => {
+      if (/^(\/(de|lt|en|pl))\/?$/.test(to.path)) { return }
+      api.reset()
+      setWindowLang('lt')
+    })
+  }
+}
