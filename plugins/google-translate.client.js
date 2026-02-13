@@ -42,6 +42,19 @@ function suppressGoogleUiArtifacts () {
   if (banner && banner.parentNode) { banner.parentNode.removeChild(banner) }
   const menuFrame = document.querySelector('iframe.goog-te-menu-frame')
   if (menuFrame && menuFrame.parentNode) { menuFrame.parentNode.removeChild(menuFrame) }
+
+  // Newer GT variants inject a generic container/iframe with `.skiptranslate`.
+  const injected = document.querySelectorAll('div.skiptranslate, iframe.skiptranslate, iframe[id^=":"]')
+  injected.forEach((node) => {
+    if (node && node.id === 'google_translate_element') { return }
+    if (node && node.parentNode) { node.parentNode.removeChild(node) }
+  })
+
+  // Also remove any overlay nodes GT may use for tooltips/menus.
+  const gtOverlays = document.querySelectorAll('#goog-gt-tt, .goog-te-balloon-frame')
+  gtOverlays.forEach((node) => {
+    if (node && node.parentNode) { node.parentNode.removeChild(node) }
+  })
   // Sometimes Google injects inline `top` offsets; force reset.
   try {
     document.body.style.top = '0px'

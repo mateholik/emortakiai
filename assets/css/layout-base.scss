@@ -29,6 +29,15 @@ iframe.goog-te-menu-frame,
   visibility: hidden !important;
   height: 0 !important;
 }
+/* Newer GT variants use generic `.skiptranslate` containers/iframes */
+.skiptranslate,
+iframe.skiptranslate,
+div.skiptranslate,
+iframe[id^=":"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
 body > .skiptranslate {
   display: none !important;
 }
