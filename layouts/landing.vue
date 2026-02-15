@@ -1,7 +1,7 @@
 <template>
   <div>
-    <transition name="slide-left">
-      <nuxt />
+    <transition name="slide-left" mode="out-in">
+      <NuxtPage />
     </transition>
   </div>
 </template>

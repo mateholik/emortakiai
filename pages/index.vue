@@ -179,7 +179,7 @@ export default {
 
 <style lang="scss">
   .bg {
-    background: url('~assets/img/bg.jpg');
+    background: url('~/assets/img/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

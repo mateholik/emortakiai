@@ -4,14 +4,18 @@ module.exports = {
     browser: true,
     node: true
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: "babel-eslint"
+    ecmaVersion: 2022,
+    sourceType: 'module'
   },
-  extends: ["@nuxtjs", "plugin:nuxt/recommended"],
+  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended'],
   // add your custom rules here
   rules: {
-    "no-trailing-spaces": "off",
-    indent: "off",
-    quotes: ["error", "single", { avoidEscape: true }]
-  }
+    'no-trailing-spaces': 'off',
+    indent: 'off',
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'vue/multi-word-component-names': 'off'
+  },
+  ignorePatterns: ['dist/', '.nuxt/', 'node_modules/']
 };

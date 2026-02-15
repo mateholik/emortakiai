@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header />
-    <transition name="slide-left">
-      <nuxt />
+    <transition name="slide-left" mode="out-in">
+      <NuxtPage />
     </transition>
     <Footer />
     <Cookies />

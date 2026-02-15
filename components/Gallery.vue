@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import CoolLightBox from '~/components/CoolLightBox.vue'
 import work1 from './../assets/img/works/work1.jpg'
 import work2 from './../assets/img/works/work2.jpg'
 import work3 from './../assets/img/works/work3.jpg'
@@ -41,6 +42,9 @@ import work18 from './../assets/img/works/work18.jpeg'
 import work19 from './../assets/img/works/work19.jpeg'
 
 export default {
+  components: {
+    CoolLightBox
+  },
   props: {
     where: {
       type: String,

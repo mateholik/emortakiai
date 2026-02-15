@@ -1,5 +1,5 @@
 <template>
-  <nav class="relative">
+  <nav class="site-header relative">
     <div class="container">
       <div class="flex items-center justify-between h-20 md:h-32">
         <SmartLink to="/" class-name="logo block mr-16">
@@ -299,6 +299,10 @@
 
 <script>
 import SmartLink from '~/components/SmartLink.vue'
+import flagLt from '~/assets/img/flags/lt.svg'
+import flagEn from '~/assets/img/flags/en.svg'
+import flagDe from '~/assets/img/flags/de.svg'
+import flagPl from '~/assets/img/flags/pl.svg'
 
 export default {
   components: {
@@ -312,10 +316,10 @@ export default {
       showLangMenu: false,
       currentLangCode: 'lt',
       languages: [
-        { code: 'lt', label: 'Lietuvių', flag: require('~/assets/img/flags/lt.svg') },
-        { code: 'en', label: 'English', flag: require('~/assets/img/flags/en.svg') },
-        { code: 'de', label: 'Deutsch', flag: require('~/assets/img/flags/de.svg') },
-        { code: 'pl', label: 'Polski', flag: require('~/assets/img/flags/pl.svg') }
+        { code: 'lt', label: 'Lietuvių', flag: flagLt },
+        { code: 'en', label: 'English', flag: flagEn },
+        { code: 'de', label: 'Deutsch', flag: flagDe },
+        { code: 'pl', label: 'Polski', flag: flagPl }
       ]
     }
   },
@@ -350,7 +354,7 @@ export default {
     document.addEventListener('click', this.onOutsideClick, { passive: true })
     document.addEventListener('keydown', this.onKeydown)
   },
-  beforeDestroy () {
+  beforeUnmount () {
     document.removeEventListener('click', this.onOutsideClick)
     document.removeEventListener('keydown', this.onKeydown)
   },
@@ -434,8 +438,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .nuxt-link-active {
+<style scoped lang="scss">
+  .main-menu > li > a.nuxt-link-active,
+  .main-menu > li > a.nuxt-link-exact-active,
+  .main-menu > li > a.router-link-active,
+  .main-menu > li > a.router-link-exact-active {
     background: #FAFAFA;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.11);
     position: relative;
@@ -452,6 +459,13 @@ export default {
       box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.11);
     }
   }
+  .logo.nuxt-link-active,
+  .logo.nuxt-link-exact-active,
+  .logo.router-link-active,
+  .logo.router-link-exact-active {
+    background: none;
+    box-shadow: none;
+  }
   .logo {
     background: none;
     box-shadow: none;
@@ -461,7 +475,7 @@ export default {
       display: none;
     }
 }
-nav {
+.site-header {
 animation: 1s appear;
 margin: auto;
 .main-menu > li > a,
@@ -590,7 +604,9 @@ li.contact {
       }
     }
   }
-  .nuxt-link-active {
+  .nuxt-link-active,
+  .router-link-active,
+  .router-link-exact-active {
     background: none;
     box-shadow: none;
     position: relative;
@@ -675,7 +691,10 @@ li {
         padding: 2rem;
       }
     }
-    .nuxt-link-active {
+    .nuxt-link-active,
+    .nuxt-link-exact-active,
+    .router-link-active,
+    .router-link-exact-active {
       background: none;
       box-shadow: none;
       position: relative;
@@ -684,7 +703,7 @@ li {
       display: none;
       }
     }
-    nav li:after {
+    li:after {
       display: none;
     }
   }
@@ -697,7 +716,7 @@ $hamburger-layer-width: 3rem;
 $hamburger-layer-spacing: 5px;
 $hamburger-layer-color: #455076;
 $hamburger-layer-border-radius: 0;
-@import "~hamburgers/_sass/hamburgers/hamburgers";
+@import "hamburgers/_sass/hamburgers/hamburgers";
 
 @keyframes appear {
 0% {

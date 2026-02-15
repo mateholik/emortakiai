@@ -2,7 +2,7 @@ const GOOGLE_COOKIE = 'googtrans'
 const LANG_KEY = '__em_translate_lang__'
 
 function clearCookie (name) {
-  if (!process.client) { return }
+  if (!import.meta.client) { return }
   const host = window.location.hostname
   const base = `${name}=; Max-Age=0; SameSite=Lax`
   // Try multiple variants because Google may set cookies with/without explicit domain.
@@ -12,13 +12,13 @@ function clearCookie (name) {
 }
 
 function getCookie (name) {
-  if (!process.client) { return null }
+  if (!import.meta.client) { return null }
   const match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'))
   return match ? decodeURIComponent(match[2]) : null
 }
 
 function ensureHiddenContainer () {
-  if (!process.client) { return }
+  if (!import.meta.client) { return }
   if (document.getElementById('google_translate_element')) { return }
   const el = document.createElement('div')
   el.id = 'google_translate_element'
@@ -27,7 +27,7 @@ function ensureHiddenContainer () {
 }
 
 function loadScriptOnce () {
-  if (!process.client) { return }
+  if (!import.meta.client) { return }
   if (document.getElementById('google-translate-script')) { return }
   const script = document.createElement('script')
   script.id = 'google-translate-script'
@@ -37,7 +37,7 @@ function loadScriptOnce () {
 }
 
 function suppressGoogleUiArtifacts () {
-  if (!process.client) { return }
+  if (!import.meta.client) { return }
   const banner = document.querySelector('iframe.goog-te-banner-frame')
   if (banner && banner.parentNode) { banner.parentNode.removeChild(banner) }
   const menuFrame = document.querySelector('iframe.goog-te-menu-frame')
@@ -64,7 +64,7 @@ function suppressGoogleUiArtifacts () {
 }
 
 function startSuppressLoop () {
-  if (!process.client) { return }
+  if (!import.meta.client) { return }
   const start = Date.now()
   const tick = () => {
     suppressGoogleUiArtifacts()
@@ -91,7 +91,7 @@ function getLangFromGoogleCookie () {
 }
 
 function getLangFromCombo () {
-  if (!process.client) { return null }
+  if (!import.meta.client) { return null }
   const combo = document.querySelector('.goog-te-combo')
   if (!combo) { return null }
   const value = (combo.value || '').toLowerCase()
@@ -131,13 +131,14 @@ function applyLanguage (lang) {
   }
 }
 
-export default function ({ app, route }, inject) {
-  if (!process.client) { return }
+export default defineNuxtPlugin((nuxtApp) => {
+  if (!import.meta.client) { return }
 
-  // Keep curated landers clean (no widget, no cookies side-effects).
-  const path = (route && route.path) || ''
-  const isCuratedLander = /^(\/(de|lt|en|pl))\/?$/.test(path)
-  if (isCuratedLander) { return }
+  const router = useRouter()
+
+  const isCuratedLander = (path) => /^(\/(de|lt|en|pl))\/?$/.test(path || '')
+
+  if (isCuratedLander(router.currentRoute.value?.path)) { return }
 
   const persisted = getLangFromCombo() || getLangFromGoogleCookie()
   if (persisted) { setWindowLang(persisted) }
@@ -156,9 +157,8 @@ export default function ({ app, route }, inject) {
     }
   }
 
-  inject('translate', api)
+  nuxtApp.provide('translate', api)
 
-  // Always prepare widget for normal pages (hidden), so switching is instant.
   ensureHiddenContainer()
   window.googleTranslateElementInit = function () {
     try {
@@ -177,13 +177,9 @@ export default function ({ app, route }, inject) {
   }
   loadScriptOnce()
 
-  // Route change => sync active language from Google cookie (if translation persists).
-  if (app && app.router) {
-    app.router.afterEach((to) => {
-      if (/^(\/(de|lt|en|pl))\/?$/.test(to.path)) { return }
-      // Google may not update `googtrans` immediately on SPA navigations; combo is the most reliable source.
-      const active = getLangFromCombo() || getLangFromGoogleCookie()
-      setWindowLang(active || 'lt')
-    })
-  }
-}
+  router.afterEach((to) => {
+    if (isCuratedLander(to.path)) { return }
+    const active = getLangFromCombo() || getLangFromGoogleCookie()
+    setWindowLang(active || 'lt')
+  })
+})

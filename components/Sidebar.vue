@@ -3,35 +3,35 @@
     <h3 class="font-semibold text-3xl md:text-4xl block lg:hidden mb-8">
       Paslaugos:
     </h3>
-    <nuxt-link to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Ortakių, gartraukių, ventiliatorių valymas nuo riebalų (prikepusių, skystų), dervų ir kt
-    </nuxt-link>
+    </NuxtLink>
 
-    <nuxt-link to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Ortakių sistemos, ventiliatorių valymas nuo dulkių
-    </nuxt-link>
+    </NuxtLink>
 
-    <nuxt-link to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas
-    </nuxt-link>
+    </NuxtLink>
 
-    <nuxt-link to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Gyvenamųjų namų ventiliacijos kanalų (šachtų) dezinfekcija
-    </nuxt-link>
+    </NuxtLink>
 
-    <nuxt-link to="/paslaugos/dumtraukiu-kaminu-valymas" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/dumtraukiu-kaminu-valymas" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Dumtraukių (kaminų) valymas
-    </nuxt-link>
+    </NuxtLink>
 
-    <nuxt-link to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma" class="flex items-center mb-8">
+    <NuxtLink to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma" class="flex items-center mb-8">
       <img src="~/assets/img/check-icon.svg" alt="check" class="mr-6 w-8 md:w-12">
       Ortakių, vėdinimo kanalų valymo įrangos nuoma
-    </nuxt-link>
+    </NuxtLink>
   </div>
 </template>
 
@@ -47,12 +47,22 @@ export default {
 
 <style lang="scss">
   .sidebar {
-    .nuxt-link-active {
+    .nuxt-link-active,
+    .nuxt-link-exact-active,
+    .router-link-active,
+    .router-link-exact-active {
       background: none;
       box-shadow: none;
       position: relative;
       color: unset;
       &:after {
+        content: "";
+        display: block;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        background: #333C57;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.11);
         bottom: -1rem;
         width: 50%;
       }

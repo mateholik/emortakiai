@@ -1,11 +1,18 @@
 <template>
-  <component
-    :is="tag"
-    v-bind="bindProps"
+  <a
+    v-if="isExternal || isMachineTranslated"
+    :href="to"
     :class="className"
   >
     <slot />
-  </component>
+  </a>
+  <NuxtLink
+    v-else
+    :to="to"
+    :class="className"
+  >
+    <slot />
+  </NuxtLink>
 </template>
 
 <script>
@@ -22,21 +29,11 @@ export default {
   },
   computed: {
     isMachineTranslated () {
-      if (!process.client) { return false }
+      if (typeof window === 'undefined') { return false }
       return (window.__em_translate_lang__ || 'lt') !== 'lt'
     },
     isExternal () {
       return /^https?:\/\//i.test(this.to)
-    },
-    tag () {
-      if (this.isExternal) { return 'a' }
-      return this.isMachineTranslated ? 'a' : 'nuxt-link'
-    },
-    bindProps () {
-      if (this.tag === 'a') {
-        return { href: this.to }
-      }
-      return { to: this.to }
     }
   }
 }

@@ -703,7 +703,7 @@ export default {
 }
 .hero-bg {
   background-image: linear-gradient(115deg, rgba(5, 10, 22, 0.5), rgba(12, 34, 64, 0.3)),
-    url('~assets/img/bg.jpg');
+    url('~/assets/img/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

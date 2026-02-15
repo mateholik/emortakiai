@@ -2,35 +2,23 @@
   <IndustryLanding :config="landingConfig" />
 </template>
 
-<script>
+<script setup>
 import IndustryLanding from '~/components/IndustryLanding.vue'
 import plConfig from '~/js/landingIndustry/pl'
 
-export default {
-  components: {
-    IndustryLanding
-  },
-  layout: 'landing',
-  data () {
-    return {
-      landingConfig: plConfig
-    }
-  },
-  head () {
-    const seo = this.landingConfig.seo || {}
-    return {
-      title: seo.title,
-      meta: [
-        { hid: 'description', name: 'description', content: seo.description },
-        { hid: 'keywords', name: 'keywords', content: seo.keywords },
-        { hid: 'og:title', property: 'og:title', content: seo.title },
-        { hid: 'og:description', property: 'og:description', content: seo.description }
-      ],
-      link: seo.canonical
-        ? [{ rel: 'canonical', href: seo.canonical }]
-        : []
-    }
-  }
-}
-</script>
+definePageMeta({ layout: 'landing' })
 
+const landingConfig = plConfig
+const seo = landingConfig.seo || {}
+
+useHead({
+  title: seo.title,
+  meta: [
+    { key: 'description', name: 'description', content: seo.description },
+    { key: 'keywords', name: 'keywords', content: seo.keywords },
+    { key: 'og:title', property: 'og:title', content: seo.title },
+    { key: 'og:description', property: 'og:description', content: seo.description }
+  ],
+  link: seo.canonical ? [{ rel: 'canonical', href: seo.canonical }] : []
+})
+</script>
