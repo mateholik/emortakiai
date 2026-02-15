@@ -2,14 +2,14 @@
   <nav class="site-header relative">
     <div class="container">
       <div class="flex items-center justify-between h-20 md:h-32">
-        <SmartLink to="/" class-name="logo block mr-16">
+        <NuxtLink to="/" class="logo block mr-16">
           <img class="w-48 md:w-auto" src="~/assets/img/logo.svg" alt="logo">
-        </SmartLink>
+        </NuxtLink>
         <ul class="hidden md:flex justify-end items-center flex-1 h-full main-menu">
           <li class="h-full">
-            <SmartLink to="/apie" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
+            <NuxtLink to="/apie" class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Apie
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="h-full">
             <div class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold cursor-pointer">
@@ -18,46 +18,46 @@
             </div>
             <ul class="submenu bg-white z-10">
               <li>
-                <SmartLink to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu">
+                <NuxtLink to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu">
                   Ortakių, gartraukių, ventiliatorių valymas nuo riebalų (prikepusių, skystų), dervų ir kt
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu">
+                <NuxtLink to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu">
                   Ortakių sistemos, ventiliatorių valymas nuo dulkių
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas">
+                <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas">
                   Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija">
+                <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija">
                   Gyvenamųjų namų ventiliacijos kanalų (šachtų) dezinfekcija
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/dumtraukiu-kaminu-valymas">
+                <NuxtLink to="/paslaugos/dumtraukiu-kaminu-valymas">
                   Dumtraukių (kaminų) valymas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma">
+                <NuxtLink to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma">
                   Ortakių, vėdinimo kanalų valymo įrangos nuoma
-                </SmartLink>
+                </NuxtLink>
               </li>
             </ul>
           </li>
           <li class="h-full">
-            <SmartLink to="/galerija" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
+            <NuxtLink to="/galerija" class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Galerija
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="h-full">
-            <SmartLink to="/technologijos" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
+            <NuxtLink to="/technologijos" class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Technologijos
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="h-full">
             <div class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold cursor-pointer">
@@ -66,41 +66,41 @@
             </div>
             <ul class="submenu submenu-iranga bg-white z-10">
               <li>
-                <SmartLink to="/iranga/rotaciniai-lankstus-velenai">
+                <NuxtLink to="/iranga/rotaciniai-lankstus-velenai">
                   Rotaciniai-lankstūs velenai
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/sepetines-masinos">
+                <NuxtLink to="/iranga/sepetines-masinos">
                   Šepetinės mašinos
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/video-foto-inspektavimo-robotas">
+                <NuxtLink to="/iranga/video-foto-inspektavimo-robotas">
                   Video, foto ispektavimo robotas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/mobilios-dulkiu-surinkimo-masinos">
+                <NuxtLink to="/iranga/mobilios-dulkiu-surinkimo-masinos">
                   Mobilios dulkių surinkimo mašinos
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/sepeciai-centravimo-diskai">
+                <NuxtLink to="/iranga/sepeciai-centravimo-diskai">
                   Šepečiai ir centravimo diskai
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/optimalus-ortakiu-valymo-komplektas">
+                <NuxtLink to="/iranga/optimalus-ortakiu-valymo-komplektas">
                   Optimalus ortakių valymo komplektas
-                </SmartLink>
+                </NuxtLink>
               </li>
             </ul>
           </li>
           <li class="h-full">
-            <SmartLink to="/kontaktai" class-name="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
+            <NuxtLink to="/kontaktai" class="px-3 lg:px-4 flex justify-center items-center h-full font-semibold">
               Kontaktai
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="h-full lang-switcher px-2 flex items-center">
             <button
@@ -180,9 +180,9 @@
             </div>
           </li>
           <li class="">
-            <SmartLink to="/apie" class-name="block py-6 pl-8 font-semibold">
+            <NuxtLink to="/apie" class="block py-6 pl-8 font-semibold">
               Apie
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="">
             <div
@@ -196,46 +196,46 @@
             </div>
             <ul class="mob-submenu" :class="{'active': mobSubMenu}">
               <li>
-                <SmartLink to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu" class-name="block w-full font-semibold">
+                <NuxtLink to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu" class="block w-full font-semibold">
                   Ortakių, gartraukių, ventiliatorių valymas nuo riebalų (prikepusių, skystų), dervų ir kt
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu" class-name="block  w-full 8 font-semibold">
+                <NuxtLink to="/paslaugos/ortakiu-sistemos-ventiliatoriu-valymas-nuo-dulkiu" class="block  w-full 8 font-semibold">
                   Ortakių sistemos, ventiliatorių valymas nuo dulkių
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas" class-name="block  w-full font-semibold">
+                <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-valymas" class="block  w-full font-semibold">
                   Gyvenamųjų  namų ventiliacijos kanalų (šachtų) valymas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class-name="block  w-full  font-semibold">
+                <NuxtLink to="/paslaugos/gyvenamuju-namu-ventiliacijos-kanalu-sachtu-dezinfekcija" class="block  w-full  font-semibold">
                   Gyvenamųjų namų ventiliacijos kanalų (šachtų) dezinfekcija
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/dumtraukiu-kaminu-valymas" class-name="block  w-full  font-semibold">
+                <NuxtLink to="/paslaugos/dumtraukiu-kaminu-valymas" class="block  w-full  font-semibold">
                   Dumtraukių (kaminų) valymas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma" class-name="block  w-full  font-semibold">
+                <NuxtLink to="/paslaugos/ortakiu-vedinimo-kanalu-valymo-irangos-nuoma" class="block  w-full  font-semibold">
                   Ortakių, vėdinimo kanalų valymo įrangos nuoma
-                </SmartLink>
+                </NuxtLink>
               </li>
             </ul>
           </li>
           <li class="">
-            <SmartLink to="/galerija" class-name="block py-6 pl-8 font-semibold">
+            <NuxtLink to="/galerija" class="block py-6 pl-8 font-semibold">
               Galerija
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li class="">
-            <SmartLink to="/technologijos" class-name="block py-6 pl-8 font-semibold">
+            <NuxtLink to="/technologijos" class="block py-6 pl-8 font-semibold">
               Technologijos
-            </SmartLink>
+            </NuxtLink>
           </li>
           <li>
             <div
@@ -249,41 +249,41 @@
             </div>
             <ul class="mob-submenu" :class="{'active': mobSubMenu2}">
               <li>
-                <SmartLink to="/iranga/rotaciniai-lankstus-velenai" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/rotaciniai-lankstus-velenai" class="block w-full font-semibold">
                   Rotaciniai-lankstūs velenai
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/sepetines-masinos" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/sepetines-masinos" class="block w-full font-semibold">
                   Šepetinės mašinos
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/video-foto-inspektavimo-robotas" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/video-foto-inspektavimo-robotas" class="block w-full font-semibold">
                   Video, foto ispektavimo robotas
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/mobilios-dulkiu-surinkimo-masinos" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/mobilios-dulkiu-surinkimo-masinos" class="block w-full font-semibold">
                   Mobilios dulkių surinkimo mašinos
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/sepeciai-centravimo-diskai" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/sepeciai-centravimo-diskai" class="block w-full font-semibold">
                   Šepečiai ir centravimo diskai
-                </SmartLink>
+                </NuxtLink>
               </li>
               <li>
-                <SmartLink to="/iranga/optimalus-ortakiu-valymo-komplektas" class-name="block w-full font-semibold">
+                <NuxtLink to="/iranga/optimalus-ortakiu-valymo-komplektas" class="block w-full font-semibold">
                   Optimalus ortakių valymo komplektas
-                </SmartLink>
+                </NuxtLink>
               </li>
             </ul>
           </li>
           <li class="">
-            <SmartLink to="/kontaktai" class-name="block py-6 pl-8 font-semibold">
+            <NuxtLink to="/kontaktai" class="block py-6 pl-8 font-semibold">
               Kontaktai
-            </SmartLink>
+            </NuxtLink>
           </li>
           <!--        <li class="contact h-full px-3 h-full">-->
           <!--          <a href="tel:+37060736036" class="h-full flex flex-col justify-center items-center font-semibold text-white">-->
@@ -298,15 +298,16 @@
 </template>
 
 <script>
-import SmartLink from '~/components/SmartLink.vue'
 import flagLt from '~/assets/img/flags/lt.svg'
 import flagEn from '~/assets/img/flags/en.svg'
 import flagDe from '~/assets/img/flags/de.svg'
 import flagPl from '~/assets/img/flags/pl.svg'
+import { useGoogleTranslate } from '#imports'
 
 export default {
-  components: {
-    SmartLink
+  setup () {
+    const { activeLanguage, isLoaded, setLanguage, supportedLanguages } = useGoogleTranslate()
+    return { activeLanguage, isLoaded, setLanguage, supportedLanguages }
   },
   data () {
     return {
@@ -314,7 +315,6 @@ export default {
       mobSubMenu: false,
       mobSubMenu2: false,
       showLangMenu: false,
-      currentLangCode: 'lt',
       languages: [
         { code: 'lt', label: 'Lietuvių', flag: flagLt },
         { code: 'en', label: 'English', flag: flagEn },
@@ -324,6 +324,19 @@ export default {
     }
   },
   computed: {
+    currentLangCode () {
+      if (import.meta.server) { return 'lt' }
+
+      const loaded = this.isLoaded && typeof this.isLoaded === 'object' && 'value' in this.isLoaded
+        ? this.isLoaded.value
+        : this.isLoaded
+      if (!loaded) { return 'lt' }
+
+      const raw = this.activeLanguage && typeof this.activeLanguage === 'object' && 'value' in this.activeLanguage
+        ? this.activeLanguage.value
+        : this.activeLanguage
+      return ['lt', 'en', 'de', 'pl'].includes(raw) ? raw : 'lt'
+    },
     currentLang () {
       return this.languages.find(l => l.code === this.currentLangCode) || this.languages[0]
     }
@@ -334,9 +347,6 @@ export default {
       this.mobSubMenu = false
       this.mobSubMenu2 = false
       this.showLangMenu = false
-      this.currentLangCode = this.getCurrentLang()
-      try { window.__em_translate_lang__ = this.currentLangCode } catch (e) {}
-      this.syncLangIndicator()
       try {
         window.scrollTo({
           top: 'header',
@@ -350,7 +360,6 @@ export default {
     }
   },
   mounted () {
-    this.currentLangCode = this.getCurrentLang()
     document.addEventListener('click', this.onOutsideClick, { passive: true })
     document.addEventListener('keydown', this.onKeydown)
   },
@@ -371,68 +380,13 @@ export default {
     onKeydown (e) {
       if (e.key === 'Escape') { this.closeLangMenu() }
     },
-    getCurrentLang () {
-      const cookieLang = this.getGoogTransLang()
-      const comboLang = this.getComboLang()
-      try {
-        if (this.$translate && typeof this.$translate.getLang === 'function') {
-          const current = this.$translate.getLang()
-          return comboLang || cookieLang || current
-        }
-      } catch (e) {}
-      return comboLang || cookieLang || 'lt'
-    },
-    getComboLang () {
-      try {
-        const combo = document.querySelector('.goog-te-combo')
-        if (!combo) return null
-        const value = (combo.value || '').toLowerCase()
-        return ['lt', 'en', 'de', 'pl'].includes(value) ? value : null
-      } catch (e) {
-        return null
-      }
-    },
-    getGoogTransLang () {
-      try {
-        const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/)
-        if (!match) return null
-        const value = decodeURIComponent(match[1] || '')
-        const m2 = value.match(/\/([a-z]{2})(?:$|\/)/i)
-        const lang = m2 ? m2[1].toLowerCase() : null
-        return ['lt', 'en', 'de', 'pl'].includes(lang) ? lang : null
-      } catch (e) {
-        return null
-      }
-    },
-    syncLangIndicator () {
-      let attemptsLeft = 10
-      const tick = () => {
-        const next = this.getCurrentLang()
-        if (next && next !== this.currentLangCode) {
-          this.currentLangCode = next
-          try { window.__em_translate_lang__ = next } catch (e) {}
-        }
-        attemptsLeft -= 1
-        if (attemptsLeft > 0) {
-          setTimeout(tick, 200)
-        }
-      }
-      setTimeout(tick, 0)
-    },
     selectLanguage (code) {
       const safe = ['lt', 'en', 'de', 'pl'].includes(code) ? code : 'lt'
       try {
-        if (this.$translate && typeof this.$translate.setLang === 'function') {
-          this.$translate.setLang(safe)
-        }
+        if (typeof this.setLanguage === 'function') { this.setLanguage(safe) }
       } catch (e) {}
-      this.currentLangCode = safe
       this.showLangMenu = false
       this.show = false
-      try {
-        window.__em_translate_lang__ = safe
-      } catch (e) {}
-      this.syncLangIndicator()
     }
   }
 }

@@ -1,9 +1,7 @@
 <template>
   <div>
     <Header />
-    <transition name="slide-left" mode="out-in">
-      <NuxtPage />
-    </transition>
+    <slot />
     <Footer />
     <Cookies />
   </div>

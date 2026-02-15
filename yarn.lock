@@ -1339,7 +1339,7 @@
     which "^5.0.0"
     ws "^8.19.0"
 
-"@nuxt/kit@3.21.1", "@nuxt/kit@^3.16.0", "@nuxt/kit@^3.9.0":
+"@nuxt/kit@3.21.1", "@nuxt/kit@^3.15.2", "@nuxt/kit@^3.16.0", "@nuxt/kit@^3.9.0":
   version "3.21.1"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.21.1.tgz#2e9dfe15498dd5bb6e372004f9ee55d9d8db55fc"
   integrity sha512-QORZRjcuTKgo++XP1Pc2c2gqwRydkaExrIRfRI9vFsPA3AzuHVn5Gfmbv1ic8y34e78mr5DMBvJlelUaeOuajg==
@@ -5340,6 +5340,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lucide-vue-next@^0.487.0:
+  version "0.487.0"
+  resolved "https://registry.yarnpkg.com/lucide-vue-next/-/lucide-vue-next-0.487.0.tgz#18d9e6b21c37c823d1c4879203b323dd97ada5f0"
+  integrity sha512-ilVgu9EHkfId7WSjmoPkzp13cuzpSGO5J16AmltjRHFoj6MlCBGY8BzsBU/ISKVlDheUxM+MsIYjNo/1hSEa6w==
+
 magic-regexp@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/magic-regexp/-/magic-regexp-0.10.0.tgz#78b4421a50d2b7a67129bf2c424a333927c3a0e5"
@@ -5754,6 +5759,15 @@ nth-check@^2.0.1, nth-check@^2.1.1:
   integrity sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
   dependencies:
     boolbase "^1.0.0"
+
+nuxt-google-translate@^1.3.8:
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/nuxt-google-translate/-/nuxt-google-translate-1.3.8.tgz#22f11b2b4a5fe37f137cf38832f54faf9e8cc4c9"
+  integrity sha512-FIxyVpcvti8L3YdlIFPLmefX/K4sW0q70p6PVHxajJCJLEBOS+aNB5rg/HmLGofkXHiqUIsndfssya3C0xn9lA==
+  dependencies:
+    "@nuxt/kit" "^3.15.2"
+    defu "^6.1.4"
+    lucide-vue-next "^0.487.0"
 
 nuxt-site-config-kit@3.2.19:
   version "3.2.19"

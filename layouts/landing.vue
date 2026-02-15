@@ -1,8 +1,6 @@
 <template>
   <div>
-    <transition name="slide-left" mode="out-in">
-      <NuxtPage />
-    </transition>
+    <slot />
   </div>
 </template>
 

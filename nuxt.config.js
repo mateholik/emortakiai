@@ -2,7 +2,6 @@ export default defineNuxtConfig({
   ssr: true,
 
   app: {
-    pageTransition: { name: 'slide-left', mode: 'out-in' },
     head: {
       title:
         'EM Ortakių Valymas ⋆ Gartraukių, ventiliatorių, kaminų, šachtų valymas',
@@ -59,7 +58,17 @@ gtag('config', 'AW-635796147');
 
   css: ['~/assets/css/tailwind.css'],
 
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@vite-pwa/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap',
+    '@vite-pwa/nuxt',
+    'nuxt-google-translate'
+  ],
+
+  googleTranslate: {
+    defaultLanguage: 'lt',
+    supportedLanguages: ['lt', 'en', 'de', 'pl']
+  },
 
   site: {
     url: 'https://emortakiuvalymas.lt'
