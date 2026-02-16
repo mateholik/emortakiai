@@ -56,7 +56,7 @@ gtag('config', 'AW-635796147');
     }
   },
 
-  css: ['~/assets/css/tailwind.css'],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/layout-base.scss'],
 
   modules: [
     '@nuxtjs/tailwindcss',
