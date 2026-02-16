@@ -7,7 +7,7 @@
             Kontaktai
           </h3>
           <p class="text-2xl">
-            <a href="tel:+37067619114" class="flex items-center mb-2 text-2xl">
+            <a href="tel:+37067619114" class="flex items-center mb-3 text-2xl">
               <img
                 class="w-8 mr-4"
                 src="~/assets/img/phone-dark.svg"
@@ -15,7 +15,7 @@
               >
               +370 6 7619 114
             </a>
-            <a href="tel:+37060736036" class="flex items-center mb-2 text-2xl">
+            <a href="tel:+37060736036" class="flex items-center mb-3 text-2xl">
               <img
                 class="w-8 mr-4"
                 src="~/assets/img/phone-dark.svg"
@@ -25,7 +25,7 @@
             </a>
             <a
               href="mailto:info@emortakiuvalymas.lt"
-              class="flex items-center mb-2 text-2xl"
+              class="flex items-center mb-3 text-2xl"
             >
               <img
                 class="w-8 mr-4"
@@ -37,7 +37,7 @@
             <a
               href="https://www.facebook.com/emortakiuvalymas"
               target="_blank"
-              class="flex items-center mb-2 text-2xl"
+              class="flex items-center mb-3 text-2xl"
             >
               <img class="w-8 mr-4" src="~/assets/img/fb-dark.svg" alt="fb">
               Sekite mus facebook'e!

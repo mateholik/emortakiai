@@ -4,24 +4,24 @@
       <div class="container">
         <div class="justify-between text-white md:flex">
           <div class="mb-8 md:mb-0">
-            <h3 class="mb-4 text-3xl font-semibold text-white">
+            <h3 class="mb-6 text-3xl font-semibold text-white">
               Navigacija
             </h3>
             <nuxt-link
               to="/apie"
-              class="block mb-2 text-2xl"
+              class="block mb-3 text-2xl"
             >
               Apie mus
             </nuxt-link>
             <nuxt-link
               to="/paslaugos/ortakiu-gartraukiu-ventiliatoriu-valymas-nuo-riebalu"
-              class="block mb-2 text-2xl"
+              class="block mb-3 text-2xl"
             >
               Paslaugos
             </nuxt-link>
             <nuxt-link
               to="/galerija"
-              class="block mb-2 text-2xl"
+              class="block mb-3 text-2xl"
             >
               Atliktų darbų galerija
             </nuxt-link>
@@ -30,12 +30,12 @@
             <div class="md:flex">
               <div class="">
                 <div class="mb-8 fix md:mb-0 md:px-8">
-                  <h3 class="mb-4 text-3xl font-semibold text-white">
+                  <h3 class="mb-6 text-3xl font-semibold text-white">
                     Kontaktai
                   </h3>
                   <a
                     href="tel:+37067619114"
-                    class="flex items-center mb-2 text-2xl"
+                    class="flex items-center mb-3 text-2xl"
                   >
                     <img
                       class="w-8 mr-4"
@@ -46,7 +46,7 @@
                   </a>
                   <a
                     href="tel:+37060736036"
-                    class="flex items-center mb-2 text-2xl"
+                    class="flex items-center mb-3 text-2xl"
                   >
                     <img
                       class="w-8 mr-4"
@@ -57,7 +57,7 @@
                   </a>
                   <a
                     href="mailto:info@emortakiuvalymas.lt"
-                    class="flex items-center mb-2 text-2xl"
+                    class="flex items-center mb-3 text-2xl"
                   >
                     <img
                       class="w-8 mr-4"
@@ -69,7 +69,7 @@
                   <a
                     href="https://www.facebook.com/emortakiuvalymas"
                     target="_blank"
-                    class="flex items-center mb-2 text-2xl"
+                    class="flex items-center mb-3 text-2xl"
                   >
                     <img class="w-8 mr-4" src="~/assets/img/fb.svg" alt="fb">
                     Sekite mus facebook'e!
@@ -77,7 +77,7 @@
                 </div>
               </div>
               <div class="mb-8 md:mb-0 md:px-8">
-                <h3 class="mb-4 text-3xl font-semibold text-white">
+                <h3 class="mb-6 text-3xl font-semibold text-white">
                   Darbo Laikas
                 </h3>
                 <p>
@@ -86,7 +86,7 @@
                 </p>
               </div>
               <div class="mb-8 md:mb-0 md:px-8">
-                <h3 class="mb-4 text-3xl font-semibold text-white">
+                <h3 class="mb-6 text-3xl font-semibold text-white">
                   Mus Rasite
                 </h3>
                 <p>

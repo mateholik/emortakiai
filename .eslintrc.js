@@ -4,6 +4,11 @@ module.exports = {
     browser: true,
     node: true
   },
+  globals: {
+    defineNuxtConfig: 'readonly',
+    defineEventHandler: 'readonly',
+    useRuntimeConfig: 'readonly'
+  },
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 2022,
