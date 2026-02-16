@@ -70,7 +70,6 @@ gtag('config', 'AW-635796147');
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/sitemap',
-    '@vite-pwa/nuxt',
     'nuxt-google-translate'
   ],
 
@@ -85,24 +84,6 @@ gtag('config', 'AW-635796147');
 
   sitemap: {
     gzip: true
-  },
-
-  pwa: {
-    registerType: 'autoUpdate',
-    manifest: {
-      name: 'EM Ortakių Valymas',
-      short_name: 'ortakiai',
-      lang: 'lt',
-      display: 'standalone',
-      theme_color: '#ffffff',
-      background_color: '#ffffff'
-    },
-    workbox: {
-      // Avoid Rollup terser issues during SW generation (Nuxt build).
-      // Still produces a valid SW; it will just be unminified.
-      mode: 'development',
-      disableDevLogs: true
-    }
   },
 
   runtimeConfig: {
