@@ -1,5 +1,13 @@
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL || 'https://emortakiuvalymas.lt'
+
 export default defineNuxtConfig({
   ssr: true,
+
+  // Nuxt 2 used `static/`; keep it as the public assets directory so
+  // `/favicon.ico`, `/1.pdf`, Google verification HTML, etc. keep working.
+  dir: {
+    public: 'static'
+  },
 
   app: {
     head: {
@@ -25,7 +33,8 @@ export default defineNuxtConfig({
         },
         {
           property: 'og:image',
-          content: 'https://emortakiuvalymas.lt/_nuxt/img/1366eea.jpg'
+          // Use a stable public asset path (not a hashed build asset).
+          content: '/og.jpg'
         }
       ],
       link: [
@@ -71,7 +80,7 @@ gtag('config', 'AW-635796147');
   },
 
   site: {
-    url: 'https://emortakiuvalymas.lt'
+    url: siteUrl
   },
 
   sitemap: {
@@ -87,6 +96,12 @@ gtag('config', 'AW-635796147');
       display: 'standalone',
       theme_color: '#ffffff',
       background_color: '#ffffff'
+    },
+    workbox: {
+      // Avoid Rollup terser issues during SW generation (Nuxt build).
+      // Still produces a valid SW; it will just be unminified.
+      mode: 'development',
+      disableDevLogs: true
     }
   },
 
@@ -101,7 +116,7 @@ gtag('config', 'AW-635796147');
       to: process.env.SMTP_TO || 'info@emortakiuvalymas.lt'
     },
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://emortakiuvalymas.lt'
+      siteUrl
     }
   }
 })

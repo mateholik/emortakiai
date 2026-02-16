@@ -3,7 +3,7 @@ const emailHref = 'mailto:info@emortakiuvalymas.lt'
 export default {
   hero: {
     eyebrow: 'Industrial ventilation & air duct cleaning',
-    title: 'Industrial ventilation & air duct cleaning for large facilities in Germany',
+    title: 'Industrial ventilation & air duct cleaning for large facilities',
     lead:
       'Certified cleaning of ventilation systems in industrial halls, logistics centers, shopping malls and production sites — without dismantling and without production downtime.',
     bullets: [
@@ -151,7 +151,7 @@ export default {
     contactTitle: 'Contact',
     details: [
       { text: 'EM Ortakių Valymas' },
-      { text: 'EU-licensed company · Service area: Germany' },
+      { text: 'EU-licensed company · Service area: EU' },
       { prefix: '📧', text: 'info@emortakiuvalymas.lt', href: emailHref },
       { text: 'Working hours: Mon–Fri 08:00–19:00' }
     ],

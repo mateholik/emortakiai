@@ -3,7 +3,7 @@ const emailHref = 'mailto:info@emortakiuvalymas.lt'
 export default {
   hero: {
     eyebrow: 'Przemysłowe czyszczenie wentylacji i kanałów powietrznych',
-    title: 'Przemysłowe czyszczenie wentylacji i kanałów powietrznych dla dużych obiektów w Niemczech',
+    title: 'Przemysłowe czyszczenie wentylacji i kanałów powietrznych dla dużych obiektów w Polsce',
     lead:
       'Certyfikowane czyszczenie systemów wentylacyjnych w halach przemysłowych, centrach logistycznych, centrach handlowych i zakładach produkcyjnych — bez demontażu i bez przestojów.',
     bullets: [
