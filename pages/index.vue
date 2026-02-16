@@ -3,7 +3,7 @@
     <section class="bg py-12 md:pt-32 md:pb-20">
       <div class="container">
         <div class="text-center">
-          <h1 class="text-white font-bold text-4xl md:text-6xl mb-6 md:mb-8">
+          <h1 class="text-white font-bold text-4xl md:text-6xl mb-6 md:mb-8 leading-relaxed">
             Reikia išvalyti ortakius nuo riebalų, dulkių <br class="hidden lg:block"> ar kitų teršalų?
           </h1>
           <p class="text-white md:text-3xl mb-12">
@@ -34,7 +34,7 @@
     <section class="py-8 md:py-16">
       <div class="container">
         <div class="text-center mb-8 md:mb-16">
-          <h2 class="text-4xl md:text-5xl font-semibold">
+          <h2 class="text-4xl md:text-5xl font-semibold mb-2">
             Paslaugos
           </h2>
           <p class="text-2xl">
@@ -127,7 +127,7 @@
     <section class="py-8 md:py-16">
       <div class="container">
         <div class="text-center mb-8 md:mb-16">
-          <h2 class="text-4xl md:text-5xl font-semibold">
+          <h2 class="text-4xl md:text-5xl font-semibold mb-2">
             Atlikti darbai
           </h2>
           <p class="text-2xl">
@@ -150,7 +150,7 @@
     <section class="py-8 md:py-16">
       <div class="container">
         <div class="text-center mb-8 md:mb-16">
-          <h2 class="text-4xl md:text-5xl font-semibold">
+          <h2 class="text-4xl md:text-5xl font-semibold mb-2">
             Kontaktai
           </h2>
           <p class="text-2xl">

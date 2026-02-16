@@ -2,7 +2,7 @@
   <section class="bg-blue-custom py-12 md:py-16">
     <div class="container">
       <div class="md:flex justify-between items-center">
-        <p class="text-center md:text-left text-white text-20 mb-10 md:mb-0 md:text-25">
+        <p class="text-center md:text-left text-white text-3xl mb-10 md:mb-0 md:text-4xl">
           Ieškote kas atliktų ortakių, kaminų valymo paslaugas? Susisiekime.
         </p>
         <div class="md:max-w-xs w-full">

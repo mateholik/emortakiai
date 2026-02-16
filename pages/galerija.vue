@@ -3,7 +3,7 @@
     <section class="bg py-12 md:pt-16 md:pb-20">
       <div class="container">
         <div class="text-center">
-          <h1 class="text-white font-semibold text-4xl md:text-5xl">
+          <h1 class="text-white font-semibold text-4xl md:text-5xl mb-2 md:mb-4">
             Atliktų darbų galerija
           </h1>
           <p class="text-white md:text-2xl">

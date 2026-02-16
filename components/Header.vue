@@ -133,9 +133,8 @@
               </li>
             </ul>
           </li>
-          <li class="contact h-full px-3 h-full">
+          <li class="contact h-full px-3 ">
             <a href="tel:+37067619114" class="h-full flex flex-col justify-center items-center font-semibold text-white">
-              <span class="text-base">Susisiekite su mumis:</span>
               <span class="font-semibold">+370 676 19 114</span>
               <span class="text-base">Licencijuota įmonė</span>
             </a>

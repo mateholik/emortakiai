@@ -3,7 +3,7 @@
     <section class="bg py-12">
       <div class="container">
         <div class="text-center">
-          <!--          <h1 class="text-white font-semibold text-4xl md:text-5xl">-->
+          <!--          <h1 class="text-white font-semibold text-4xl md:text-5xl mb-2 md:mb-4">-->
           <!--            Įranga-->
           <!--          </h1>-->
           <div class="mb-4">
